@@ -9,7 +9,7 @@ const GlobalStyleWrapper = createGlobalStyle`
   body, button, form, h1, h2, h3, h4, h5, h6, p, input, legend, li, ol, ul, select, table, td, textarea, th {
     margin:0;
     padding:0;
-    background-color: #1D1D1D;
+    /* background-color: #1D1D1D; */
   }
   
   a {
@@ -42,13 +42,26 @@ const GlobalStyleWrapper = createGlobalStyle`
   body {
   padding: 0;
   margin: 0;
-  font-family: 'GyeonggiBatang';
+  font-family: 'NanumSquareNeo-Variable';
   word-break: keep-all;
+  background-color: #FFF9E7;
   /* font-family: -apple-system, InkLipquid; */
 }
 @font-face {
-    font-family: 'GyeonggiBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SlowSlow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_10@1.0/SlowSlow.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -87,7 +100,7 @@ const Container = styled.div`
   width: 100vw;
   margin: 0 auto;
   font-size: 1.6rem;
-  background-color: white;
+  background-color: #fff9e7;
   /* font-family: "Noto Sans KR"; */
   color: #222222;
 `;
