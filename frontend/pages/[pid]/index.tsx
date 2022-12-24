@@ -9,13 +9,14 @@ export default function Home() {
   const { data: session, status } = useSession<any>({ required: false });
   console.log(session);
   const [boardMaster, setBoardMaster] = useState();
+  const [modal, setModal] = useState(false);
   const [hidden, setHidden] = useState();
   const [boardMasternickname, setBoardMasterNickname] = useState();
   // console.log(router.query.pid);
   const pid = router.query.pid;
   const getBoardMaster = () => {
     axios
-      .post("http://localhost:8000/accounts/nickname/pid", {
+      .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/nickname/pid", {
         pid: router.query.pid,
       })
       .then(function (res) {

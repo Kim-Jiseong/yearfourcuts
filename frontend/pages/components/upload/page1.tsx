@@ -22,7 +22,7 @@ export default function Upload(props: any) {
 
   const getColor = () => {
     axios
-      .get("http://localhost:8000/posts/colorlist")
+      .get(process.env.NEXT_PUBLIC_BASE_URL + "posts/colorlist")
       .then((res) => {
         console.log(res.data.colorlist[0]);
         setColorList(res.data.colorlist);
@@ -73,20 +73,17 @@ export default function Upload(props: any) {
       <S.SubTitle>컬러</S.SubTitle>
       <S.ColorContainer>
         {colorList &&
-          colorList.map((color: any) => (
-            <S.ColorWrapperContainer>
+          colorList.map((color: any, idx: number) => (
+            <S.ColorWrapperContainer key={color}>
               <S.ColorWrapperSel
-                key={color}
                 color={color}
                 selected={selColor}
-                onClick={() => {
-                  setSelColor(color);
-                }}
+                // onClick={() => {
+                //   setSelColor(color);
+                // }}
               ></S.ColorWrapperSel>
               <S.ColorWrapper
-                key={color.index}
                 color={color}
-                selected={selColor}
                 onClick={() => {
                   setSelColor(color);
                 }}

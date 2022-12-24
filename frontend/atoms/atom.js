@@ -47,3 +47,8 @@ export const pageAtom = atom({
   default: 1,
   // effects_UNSTABLE: [persistAtom],
 });
+export const modalAtom = atom({
+  key: "modalAtom",
+  default: false,
+  // effects_UNSTABLE: [persistAtom],
+});

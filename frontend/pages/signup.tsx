@@ -13,7 +13,7 @@ export default function Signup() {
   // console.log("session", session);
   const userSignUp = () => {
     axios
-      .post("http://localhost:8000/accounts/google/callback/", {
+      .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/google/callback/", {
         accessToken: session?.accessToken,
       })
       .then(function (res) {
@@ -37,7 +37,7 @@ export default function Signup() {
   };
   const setNickname = () => {
     axios
-      .post("http://localhost:8000/accounts/nickname/change", {
+      .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/nickname/change", {
         email: session?.user?.email,
         nickname: input,
       })

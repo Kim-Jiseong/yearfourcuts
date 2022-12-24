@@ -16,7 +16,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  background: ${(props) => props.color};
+  background: ${(props) => props.color} no-repeat center;
+  background-size: cover;
   & div:last-child {
     right: 0;
   }

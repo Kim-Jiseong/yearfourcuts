@@ -22,7 +22,7 @@ export default class MyDocument extends Document {
         ...initialProps,
         styles: (
           <>
-            {initialProps.styles} {sheet.getStyleElement()}{" "}
+            {initialProps.styles} {sheet.getStyleElement()}
           </>
         ),
       };
@@ -36,6 +36,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <title>일년네컷</title>
+
           <meta name="description" content="일년네컷" />
           <link
             rel="stylesheet"
@@ -45,6 +46,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           ></link>
+          {/* <script src="node_modules/eruda/eruda.js"></script>
+          <script>eruda.init();</script> */}
         </Head>
         <body>
           <Main />

@@ -75,7 +75,7 @@ export default function Upload(props: any) {
     formData.append("public_id", pid);
     await axios({
       method: "post",
-      url: "http://localhost:8000/posts/newPost",
+      url: process.env.NEXT_PUBLIC_BASE_URL + "posts/newPost",
       data: formData,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -83,10 +83,20 @@ export default function Upload(props: any) {
     })
       .then(function (res) {
         console.log(res);
+        setFile1("");
+        setFile2("");
+        setFile3("");
+        setFile4("");
+        setAuthor("");
+        setLetter("");
+        setFrame("");
+        setSelColor("#FFD275");
+
         router.push("/" + pid);
       })
       .catch(function (error) {
         console.log(error);
+        alert("에러가 발생했습니다");
       });
   };
   return (

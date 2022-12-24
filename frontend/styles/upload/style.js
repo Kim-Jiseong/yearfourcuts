@@ -79,17 +79,19 @@ export const ColorWrapper = styled.div`
   transform: translate(-50%, -50%);
   /* background-color: red; */
   border: 3px solid #fff9e7;
-  background: ${(props) => props.color || "black"};
+  background: ${(props) => props.color || "black"} no-repeat center;
+  background-size: cover;
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25);
 `;
 export const ColorWrapperSel = styled.div`
   width: 6.8rem;
   height: 6.8rem;
-  background: ${(props) => props.color || "black"};
-  /* position: absolute;
+  background: ${(props) => props.color || "black"} no-repeat center;
+  background-size: cover;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
 
   border-radius: 500px;
   visibility: hidden;

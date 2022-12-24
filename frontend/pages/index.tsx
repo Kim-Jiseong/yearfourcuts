@@ -22,6 +22,7 @@ export default function Intro() {
       signIn("google", { callbackUrl: "/signup" });
     }
   };
+  // console.log(process.env.NEXT_PUBLIC_BASE_URL);
   return (
     <S.Container>
       <S.ContentContainer>

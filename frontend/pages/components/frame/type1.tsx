@@ -142,6 +142,9 @@ export default function Frame1(props: any) {
     inputRef4.current.click();
   }, []);
   // -----------------------
+
+  const test =
+    "url(https://velog.velcdn.com/images/yh20studio/post/fb3683b0-5997-4efd-aece-e5fa6253e0d5/52%EB%B2%88%EC%9E%90%EC%82%B0%207333%E3%85%87%E3%84%B4%E3%85%87.png)";
   return (
     <div>
       {frame === 1 && (
