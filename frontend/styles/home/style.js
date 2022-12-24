@@ -2,7 +2,7 @@ import styled from "styled-components";
 // import { colors } from 'styles/theme'
 
 export const Container = styled.div`
-  width: 80%;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
@@ -29,7 +29,7 @@ export const SubTitle = styled.div`
   color: #4f3500;
   /* font-weight: 700; */
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 4.2rem;
   font-family: "SlowSlow";
 `;

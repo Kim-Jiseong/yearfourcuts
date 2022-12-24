@@ -30,7 +30,7 @@ export default function Intro() {
         <S.Btn onClick={onClickEnter}>내 앨범 들어가기</S.Btn>
         <S.Btn onClick={onClickCreate}>내 앨범 만들기</S.Btn>
         <button onClick={() => signOut()}>Sign Out</button>
-        {session && <div>{session.user.email}</div>}
+        {session && <div>{session?.user?.email}</div>}
       </S.ContentContainer>
     </S.Container>
   );
