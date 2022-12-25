@@ -3,16 +3,16 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import * as S from "styles/main/style";
 import { useRecoilState } from "recoil";
-import { frameAtom, colorAtom, pageAtom } from "atoms/atom";
+import { frameAtom, colorAtom, pageAtom, modalAtom } from "atoms/atom";
 import axios from "axios";
 function Header(props: any) {
   const router = useRouter();
-  const sendPage = (page: number) => {
-    console.log("sendpage", page);
-    props.getPage(page);
-  };
-  const [frame, setFrame] = useRecoilState<any>(frameAtom);
-  const [selColor, setSelColor] = useRecoilState<any>(colorAtom);
+  // const sendPage = (page: number) => {
+  //   console.log("sendpage", page);
+  //   props.getPage(page);
+  // };
+  const [modal, setModal] = useRecoilState<any>(modalAtom);
+  const [page, setPage] = useRecoilState<any>(pageAtom);
   return (
     <S.Header>
       {props.page === "main" && (
@@ -27,7 +27,7 @@ function Header(props: any) {
           <i
             className="bi bi-upload"
             onClick={() => {
-              // props.getPage(2);
+              setModal("share");
             }}
           ></i>
         </S.HeaderContent>
@@ -57,7 +57,7 @@ function Header(props: any) {
           <i
             className="bi bi-chevron-left"
             onClick={() => {
-              sendPage(props.page - 1);
+              setPage(page - 1);
             }}
           ></i>
           <p>사진 올리기</p>

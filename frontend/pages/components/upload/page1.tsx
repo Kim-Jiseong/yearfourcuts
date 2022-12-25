@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
-import { signIn, signOut, useSession } from "next-auth/react";
 import * as S from "styles/upload/style";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { useRecoilState } from "recoil";
 import { frameAtom, colorAtom, pageAtom } from "atoms/atom";
-import Header from "pages/components/header";
 import F1 from "public/img/FrameSel1.png";
 import F2 from "public/img/FrameSel2.png";
 import F3 from "public/img/FrameSel3.png";
-import { constSelector } from "recoil";
 export default function Upload(props: any) {
   const router = useRouter();
 
@@ -77,7 +74,7 @@ export default function Upload(props: any) {
             <S.ColorWrapperContainer key={color}>
               <S.ColorWrapperSel
                 color={color}
-                selected={selColor}
+                title={selColor}
                 // onClick={() => {
                 //   setSelColor(color);
                 // }}

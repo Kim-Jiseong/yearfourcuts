@@ -79,3 +79,124 @@ export const SubBtn2 = styled(Btn)`
   height: 5.6rem;
   color: black;
 `;
+export const NoPostContainer = styled.div`
+  width: 100%;
+  padding-bottom: 120%;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+  background: #ffffff80 0% 0% no-repeat padding-box;
+  border: 2px dashed #333333;
+  border-radius: 12px;
+  position: relative;
+`;
+export const NoPostInfo = styled.div`
+  width: 100%;
+  font-family: "slowslow";
+  font-size: 2.2rem;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+export const ShareContainer = styled.div`
+  width: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const URLShareWrapper = styled.div`
+  margin: 2rem;
+`;
+export const URLShareInput = styled.div`
+  width: 80%;
+  height: 3.5rem;
+  background: #ffffff;
+  box-shadow: inset 0px 2px 6px #00000029;
+  border: 1px solid #1d1b1c;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 0 auto;
+  & input {
+    width: 80%;
+    height: 3.5rem;
+    background: none;
+    color: #a5a5a5;
+    border: none;
+  }
+`;
+export const URLShareButton = styled.button``;
+export const PostListContainer = styled.div`
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: block;
+`;
+export const PostListInfo = styled.div`
+  font-family: "SlowSlow";
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
+export const FrameBox = styled.div`
+  width: 210px;
+  /* padding-bottom: 150%; */
+  margin-right: 2rem;
+  display: inline-block;
+`;
+export const ModalBg = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+`;
+export const ModalContainer = styled.div`
+  position: fixed;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.6rem;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+export const ModalInfoContainer = styled.div`
+  width: 80%;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  & div:last-child {
+    cursor: pointer;
+  }
+`;
+export const ModalPostContainer = styled.div`
+  width: 90%;
+  max-width: 387px;
+  position: fixed;
+  /* background-color: white; */
+  border-radius: 20px;
+  padding: 1.6rem;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+export const ModalPostWrapper = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;

@@ -12,30 +12,36 @@ export default function Signup() {
   const { data: session, status } = useSession<any>({ required: false });
   // console.log("session", session);
   const userSignUp = () => {
-    axios
-      .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/google/callback/", {
-        accessToken: session?.accessToken,
-      })
-      .then(function (res) {
-        console.log(res);
-        console.log("테스트", res.status);
-        if (res.data.status === "202 UserAlreadyExist" && res.data.nickname) {
-          router.push(res.data.pid);
-          // console.log(res.data.pid);
-        } else if (
-          res.data.status === "202 UserAlreadyExist" &&
-          !res.data.nickname
-        ) {
-          setLoading(false);
-        } else {
-          setLoading(false);
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    console.log("회원가입", session);
+    if (session.accessToken) {
+      axios
+        // .post("http://localhost:8000/api/accounts/google/callback/", {
+        .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/google/callback/", {
+          accessToken: session.accessToken,
+        })
+        .then(function (res) {
+          console.log(res);
+          if (res.data.status === "202 UserAlreadyExist" && res.data.nickname) {
+            router.push(res.data.pid);
+            // console.log(res.data.pid);
+          } else if (
+            res.data.status === "202 UserAlreadyExist" &&
+            !res.data.nickname
+          ) {
+            setLoading(false);
+          } else {
+            setLoading(false);
+          }
+        })
+        .catch(function (error) {
+          console.log("에러발생");
+          signIn("google", { callbackUrl: "/signup" });
+          console.log(error);
+        });
+    }
   };
   const setNickname = () => {
+    console.log("닉네임");
     axios
       .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/nickname/change", {
         email: session?.user?.email,
@@ -55,8 +61,8 @@ export default function Signup() {
       });
   };
   useEffect(() => {
-    console.log("유저 생성 시작");
     if (status === "authenticated") {
+      console.log("유저 생성 시작");
       userSignUp();
     }
   }, [status]);

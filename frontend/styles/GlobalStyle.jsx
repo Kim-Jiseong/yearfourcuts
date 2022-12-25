@@ -45,6 +45,10 @@ const GlobalStyleWrapper = createGlobalStyle`
   font-family: 'NanumSquareNeo-Variable';
   word-break: keep-all;
   background-color: #FFF9E7;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
   /* font-family: -apple-system, InkLipquid; */
 }
 @font-face {

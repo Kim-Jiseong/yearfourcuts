@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding-bottom: calc(150% + 6rem);
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: relative;
   background: ${(props) => props.color} no-repeat center;
   background-size: cover;
@@ -36,8 +36,7 @@ export const PhotoContainer = styled.div`
   width: 50%;
   height: 100%;
   padding-left: 1rem;
-  /* top: 0;
-  left: 50%; ; */
+  left: 0; ;
 `;
 export const PhotoContainer2 = styled.div`
   width: 48%;
@@ -49,12 +48,10 @@ export const PhotoContainer2 = styled.div`
   padding-bottom: 7rem;
   padding-right: 1rem;
   position: absolute;
-
   width: 50%;
   height: 100%;
   align-items: flex-end;
-  /* top: 0;
-  left: 50%; ; */
+  right: 0; ;
 `;
 export const PhotoWrapper = styled.div`
   background-color: white;

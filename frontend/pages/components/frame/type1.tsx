@@ -56,7 +56,7 @@ export default function Frame1(props: any) {
       }
     }
   };
-  const inputRef1 = useRef<HTMLInputElement | null>(null);
+  const inputRef1 = useRef<any>(null);
   const onUploadImageButtonClick1 = useCallback(() => {
     if (!inputRef1.current) {
       return;
@@ -82,7 +82,7 @@ export default function Frame1(props: any) {
       }
     }
   };
-  const inputRef2 = useRef<HTMLInputElement | null>(null);
+  const inputRef2 = useRef<any>(null);
   const onUploadImageButtonClick2 = useCallback(() => {
     if (!inputRef2.current) {
       return;
@@ -108,7 +108,7 @@ export default function Frame1(props: any) {
       }
     }
   };
-  const inputRef3 = useRef<HTMLInputElement | null>(null);
+  const inputRef3 = useRef<any>(null);
   const onUploadImageButtonClick3 = useCallback(() => {
     if (!inputRef3.current) {
       return;
@@ -118,7 +118,7 @@ export default function Frame1(props: any) {
   // -----------------------
   const [file4, setFile4] = useRecoilState<any>(file4Atom);
   const saveImgFile4 = async () => {
-    const file4 = inputRef4.current?.files[0];
+    const file4 = inputRef4.current.files[0];
     if (file4) {
       const compressedFile = await imageCompression(file4, options);
       const reader = new FileReader();
@@ -134,7 +134,7 @@ export default function Frame1(props: any) {
       }
     }
   };
-  const inputRef4 = useRef<HTMLInputElement | null>(null);
+  const inputRef4 = useRef<any>(null);
   const onUploadImageButtonClick4 = useCallback(() => {
     if (!inputRef4.current) {
       return;
@@ -188,7 +188,7 @@ export default function Frame1(props: any) {
             </S.PhotoWrapper>
           </S.PhotoContainer>
 
-          <S.PhotoContainer>
+          <S.PhotoContainer2>
             <S.PhotoWrapperGrey>
               <img src={file1 ? file1 : Blank.src}></img>
             </S.PhotoWrapperGrey>
@@ -201,7 +201,7 @@ export default function Frame1(props: any) {
             <S.PhotoWrapperGrey>
               <img src={file4 ? file4 : Blank.src}></img>
             </S.PhotoWrapperGrey>
-          </S.PhotoContainer>
+          </S.PhotoContainer2>
         </S.Container>
       )}
       {frame === 2 && (

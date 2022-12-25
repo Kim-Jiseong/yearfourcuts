@@ -60,7 +60,7 @@ export const ColorContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 export const ColorWrapperContainer = styled.div`
   position: relative;
@@ -96,7 +96,7 @@ export const ColorWrapperSel = styled.div`
   border-radius: 500px;
   visibility: hidden;
   ${(props) =>
-    props.selected === props.color &&
+    props.title === props.color &&
     css`
       visibility: visible;
     `}

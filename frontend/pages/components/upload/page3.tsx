@@ -91,7 +91,7 @@ export default function Upload(props: any) {
         setLetter("");
         setFrame("");
         setSelColor("#FFD275");
-
+        setPage(1);
         router.push("/" + pid);
       })
       .catch(function (error) {
@@ -105,8 +105,12 @@ export default function Upload(props: any) {
         <div>Step 3</div>
         <div>메시지를 남겨주세요</div>
       </S.InfoContainer>
-      <S.SubTitle>작성자</S.SubTitle>
-      <S.Author onChange={authorInput}></S.Author>
+      <S.SubTitle>작성</S.SubTitle>
+      <S.Author
+        onChange={authorInput}
+        maxLength={8}
+        placeholder="8글자 이하로 적어주세요"
+      ></S.Author>
       <S.SubTitle>메시지</S.SubTitle>
       <S.Letter
         rows={1}
