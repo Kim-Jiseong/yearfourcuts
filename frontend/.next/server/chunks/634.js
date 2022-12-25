@@ -95,7 +95,7 @@ function Upload(props) {
     const [selColor, setSelColor] = (0,recoil__WEBPACK_IMPORTED_MODULE_6__.useRecoilState)(atoms_atom__WEBPACK_IMPORTED_MODULE_7__/* .colorAtom */ .cg);
     // const [selColor, setSelColor] = useState<any>();
     const getColor = ()=>{
-        axios__WEBPACK_IMPORTED_MODULE_4__["default"].get("http://ec2-13-125-79-217.ap-northeast-2.compute.amazonaws.com/api/" + "posts/colorlist").then((res)=>{
+        axios__WEBPACK_IMPORTED_MODULE_4__["default"].get("http://ec2-13-125-79-217.ap-northeast-2.compute.amazonaws.com/backend/" + "posts/colorlist").then((res)=>{
             console.log(res.data.colorlist[0]);
             setColorList(res.data.colorlist);
         }).catch((err)=>{
