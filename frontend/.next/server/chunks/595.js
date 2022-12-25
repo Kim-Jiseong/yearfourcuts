@@ -95,7 +95,7 @@ function Upload(props) {
         formData.append("public_id", pid);
         await (0,axios__WEBPACK_IMPORTED_MODULE_4__["default"])({
             method: "post",
-            url: "http://ec2-13-125-79-217.ap-northeast-2.compute.amazonaws.com/backend/" + "posts/newPost",
+            url: "https://www.4cuts4memories.com/backend/" + "posts/newPost",
             data: formData,
             headers: {
                 "Content-Type": "multipart/form-data"
