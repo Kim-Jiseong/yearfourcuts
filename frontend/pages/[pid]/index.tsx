@@ -16,7 +16,7 @@ export default function Home() {
   const [modal, setModal] = useRecoilState(modalAtom);
   const [hidden, setHidden] = useState();
   const [boardMasternickname, setBoardMasterNickname] = useState();
-  const [postList, setPostList] = useState<any>();
+  const [postList, setPostList] = useState<any>([]);
   const [currentUrl, setCurrentUrl] = useState("");
   // console.log(router.query.pid);
   const pid = router.query.pid;
@@ -119,7 +119,7 @@ export default function Home() {
         )}
         {/* 여기{hidden && <p>숨긴 유저입니다</p>} */}
 
-        {postList && (
+        {postList.length > 0 && (
           <div style={{ width: "100%", marginBottom: "8rem" }}>
             <S.PostListInfo>
               좌우로 밀어서 친구들이 남긴 사진을 확인해보세요!
@@ -194,7 +194,7 @@ export default function Home() {
             </S.PostListContainer>
           </div>
         )}
-        {!postList && (
+        {postList.length === 0 && (
           <S.NoPostContainer>
             <S.NoPostInfo>
               아직 사진이 없어요 ㅠㅠ

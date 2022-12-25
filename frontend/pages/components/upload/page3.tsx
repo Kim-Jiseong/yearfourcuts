@@ -129,6 +129,7 @@ export default function Upload(props: any) {
             letter &&
             author
           ) {
+            setPage("loading");
             sendFormData();
           }
         }}

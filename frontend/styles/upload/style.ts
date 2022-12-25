@@ -1,7 +1,23 @@
 import { constants } from "buffer";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 // import css from "styled-jsx/css";
 // import { colors } from 'styles/theme'
+
+export const spinner = keyframes`
+0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+`;
 
 export const Container = styled.div`
   width: 80%;
@@ -118,4 +134,24 @@ export const Btn = styled.div`
   color: #1d1b1c;
   font-size: 1.8rem;
   /* font-weight: 700; */
+`;
+export const LoadingContainer = styled.div`
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+export const LoaderWrapper = styled.div`
+  display: inline-block;
+  transform: translateZ(1px);
+  & > div {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    margin: 8px;
+    border-radius: 50%;
+    background: #ff7575;
+    animation: ${spinner} 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
 `;

@@ -31,6 +31,13 @@ export default function Upload() {
       {page === 1 && <Page1></Page1>}
       {page === 2 && <Page2></Page2>}
       {page === 3 && <Page3></Page3>}
+      {page === "loading" && (
+        <S.LoadingContainer>
+          <S.LoaderWrapper>
+            <div></div>
+          </S.LoaderWrapper>
+        </S.LoadingContainer>
+      )}
     </div>
   );
 }
