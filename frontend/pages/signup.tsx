@@ -39,7 +39,7 @@ export default function Signup() {
         })
         .catch(function (error) {
           console.log("에러발생");
-          signIn("google", { callbackUrl: "/signup" });
+          // signIn("google", { callbackUrl: "/signup" });
           console.log(error);
         });
     }
