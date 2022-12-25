@@ -113,6 +113,7 @@ export default function DetailFrame(props: any) {
                 }}
               >
                 <p>{letter}</p>
+                <p>{author}</p>
               </S.LetterModal>
             )}
           </T.Container>
@@ -151,6 +152,7 @@ export default function DetailFrame(props: any) {
                 }}
               >
                 <p>{letter}</p>
+                <p>{author}</p>
               </S.LetterModal>
             )}
           </M.Container>

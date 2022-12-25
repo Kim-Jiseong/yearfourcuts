@@ -154,13 +154,18 @@ function DetailFrame(props) {
                                 className: "bi bi-envelope-paper"
                             })
                         }),
-                        modal && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .LetterModal */ .$S, {
+                        modal && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .LetterModal */ .$S, {
                             onClick: ()=>{
                                 setModal(false);
                             },
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                children: letter
-                            })
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    children: letter
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    children: author
+                                })
+                            ]
                         })
                     ]
                 })
@@ -205,13 +210,18 @@ function DetailFrame(props) {
                                 className: "bi bi-envelope-paper"
                             })
                         }),
-                        modal && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .LetterModal */ .$S, {
+                        modal && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .LetterModal */ .$S, {
                             onClick: ()=>{
                                 setModal(false);
                             },
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                children: letter
-                            })
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    children: letter
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    children: author
+                                })
+                            ]
                         })
                     ]
                 })
