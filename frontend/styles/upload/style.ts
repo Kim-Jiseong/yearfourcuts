@@ -1,13 +1,8 @@
 import { constants } from "buffer";
-import styled from "styled-components";
-import css from "styled-jsx/css";
+import styled, { css } from "styled-components";
+// import css from "styled-jsx/css";
 // import { colors } from 'styles/theme'
-// export interface FFrameTypes {
-//   id?: number;
-//   color?: string;
-//   select?: number;
-//   prop?: any;
-// }
+
 export const Container = styled.div`
   width: 80%;
   min-height: 100vh;
@@ -41,21 +36,6 @@ export const FrameContainer = styled.div`
   white-space: nowrap;
 `;
 
-export const Frame = styled.img`
-  padding: calc(1rem + 2px);
-  height: calc(100% + 2px);
-  border-radius: 4px;
-  /* width: 100%; */
-  cursor: pointer;
-  ${(props) =>
-    props.id === props.select &&
-    css`
-      padding: 1rem;
-      border: 2px dashed;
-      border-color: ${props.color};
-    `}
-  margin-bottom: 2rem;
-`;
 export const ColorContainer = styled.div`
   width: 100%;
   display: flex;

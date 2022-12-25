@@ -9,11 +9,15 @@ export default function Signup() {
   const [err, setErr] = useState(false);
   const [input, setInput] = useState<any>();
   const [loading, setLoading] = useState(true);
+  type Session = {
+    accessToken: any | string;
+  };
   const { data: session, status } = useSession<any>({ required: false });
   // console.log("session", session);
+
   const userSignUp = () => {
     console.log("회원가입", session);
-    if (session.accessToken) {
+    if (session?.accessToken) {
       axios
         // .post("http://localhost:8000/api/accounts/google/callback/", {
         .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/google/callback/", {

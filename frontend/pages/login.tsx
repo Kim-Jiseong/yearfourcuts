@@ -7,7 +7,7 @@ export default function Login() {
     console.log("session", session);
     return (
       <div>
-        Welcome. {session?.user.email}
+        {/* Welcome. {session?.user.email} */}
         <br />
         <button onClick={() => signOut()}>Sign Out</button>
       </div>
