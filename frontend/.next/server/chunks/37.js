@@ -52,13 +52,25 @@ function Upload(props) {
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(pages_components_frame_type1__WEBPACK_IMPORTED_MODULE_5__["default"], {}),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
-                onClick: ()=>{
-                    if (frame && selColor && file1 && file2 && file3 && file4) {
-                        setPage(3);
-                    }
-                },
-                children: "다음으로"
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .BtnWrapper */ .Bo, {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
+                        color: "white",
+                        onClick: ()=>{
+                            setPage(page - 1);
+                        },
+                        children: "이전으로"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
+                        color: "#FF7575",
+                        onClick: ()=>{
+                            if (frame && selColor && file1 && file2 && file3 && file4) {
+                                setPage(3);
+                            }
+                        },
+                        children: "다음으로"
+                    })
+                ]
             })
         ]
     });

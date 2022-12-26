@@ -15,7 +15,11 @@ function Share(props: any) {
     <div>
       <S.URLShareWrapper>
         <CopyToClipboard text={props.currentUrl}>
-          <S.URLShareInput>
+          <S.URLShareInput
+            onClick={() => {
+              alert("링크가 복사되었어요!");
+            }}
+          >
             <input value={props.currentUrl} readOnly></input>
             <S.URLShareButton>
               <i className="bi bi-clipboard"></i>

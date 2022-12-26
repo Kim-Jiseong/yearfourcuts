@@ -130,7 +130,7 @@ function Upload(props) {
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .SubTitle */ .DK, {
-                children: "작성"
+                children: "from."
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Author */ .S3, {
                 onChange: authorInput,
@@ -146,6 +146,10 @@ function Upload(props) {
                 onChange: handleResizeHeight
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
+                style: {
+                    width: "100%"
+                },
+                color: "#FF7575",
                 onClick: ()=>{
                     if (frame && selColor && file1 && file2 && file3 && file4 && letter && author) {
                         setPage("loading");

@@ -111,6 +111,7 @@ export default function Upload(props: any) {
           ))}
       </S.ColorContainer>
       <S.Btn
+        style={{ backgroundColor: "white", width: "100%" }}
         onClick={() => {
           if (frame && selColor) {
             setPage(2);

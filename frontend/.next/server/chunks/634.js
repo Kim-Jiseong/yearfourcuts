@@ -72,7 +72,7 @@ axios__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (awa
 
 
 const Frame = styled_components__WEBPACK_IMPORTED_MODULE_5___default().img.withConfig({
-    componentId: "sc-a3846628-0"
+    componentId: "sc-202cc91e-0"
 })`
   padding: calc(1rem + 2px);
   height: calc(100% + 2px);
@@ -168,6 +168,10 @@ function Upload(props) {
                     }, color))
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
+                style: {
+                    backgroundColor: "white",
+                    width: "100%"
+                },
                 onClick: ()=>{
                     if (frame && selColor) {
                         setPage(2);

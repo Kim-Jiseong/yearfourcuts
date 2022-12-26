@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 // import { colors } from 'styles/theme'
 
 export const Container = styled.div`
@@ -62,7 +62,12 @@ export const Btn = styled.div`
   font-size: 1.6rem;
   color: white;
   font-size: 1.8rem;
-  /* font-weight: 700; */
+  position: relative;
+  & img {
+    position: absolute;
+    left: -20px;
+    width: 20%;
+  }
 `;
 export const BtnWrapper = styled.div`
   margin-top: 1rem;
@@ -145,6 +150,11 @@ export const PostListInfo = styled.div`
 `;
 export const FrameBox = styled.div`
   width: 210px;
+  ${(props) =>
+    props.id === 1 &&
+    css`
+      width: 105px;
+    `}
   /* padding-bottom: 150%; */
   margin-right: 2rem;
   display: inline-block;
@@ -173,7 +183,7 @@ export const ModalContainer = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const ModalInfoContainer = styled.div`
-  width: 80%;
+  width: 90%;
   text-align: center;
   display: flex;
   margin: 0 auto;
@@ -197,6 +207,46 @@ export const ModalPostContainer = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const ModalPostWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+`;
+
+export const SetHiddenConatainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+`;
+export const SetHiddenBtn = styled.label`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  & input {
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 6rem;
+    height: 3.25rem;
+  }
+  & input::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+  }
+  & input:checked::before {
+    background-color: white;
+    left: 2.75rem;
+  }
+  & input:checked {
+    background-color: tomato;
+    border-color: tomato;
+  }
 `;

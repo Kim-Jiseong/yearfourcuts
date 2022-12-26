@@ -85,12 +85,12 @@ export const Author = styled.p`
   border-radius: 8px;
 `;
 export const MailIcon = styled.div`
-  width: auto;
-  margin-right: 1rem;
-  position: absolute;
+  /* width: auto; */
+  /* position: absolute; */
   font-size: 2rem;
-  right: 0;
-  bottom: 10px;
+  /* font-family: "SlowSlow"; */
+  /* right: 0; */
+  /* bottom: 0px; */
   background: white;
   padding: 1rem 1rem 0.9rem 1rem;
   display: flex;
@@ -133,4 +133,16 @@ export const LetterModal = styled.div`
     right: 10px;
     text-align: right;
   }
+`;
+export const BtnWrapper = styled.div`
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0);
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 `;

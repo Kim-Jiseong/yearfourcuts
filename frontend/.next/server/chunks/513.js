@@ -35,6 +35,9 @@ function Share(props) {
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_copy_to_clipboard__WEBPACK_IMPORTED_MODULE_5__.CopyToClipboard, {
                     text: props.currentUrl,
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_main_style__WEBPACK_IMPORTED_MODULE_2__/* .URLShareInput */ .tc, {
+                        onClick: ()=>{
+                            alert("링크가 복사되었어요!");
+                        },
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                 value: props.currentUrl,

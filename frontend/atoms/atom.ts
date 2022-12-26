@@ -9,7 +9,7 @@ export const frameAtom = atom<any>({
 });
 export const colorAtom = atom<any>({
   key: "color",
-  default: "#FFD275",
+  default: "#FFFFFF",
   // effects_UNSTABLE: [persistAtom],
 });
 export const file1Atom = atom<any>({

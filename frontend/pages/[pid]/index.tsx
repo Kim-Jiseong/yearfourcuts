@@ -7,6 +7,7 @@ import Header from "pages/components/header";
 import Share from "pages/components/share";
 import ShowFrame from "pages/components/frame/showFrame";
 import DetailFrame from "pages/components/frame/detailFrame";
+import intro from "public/img/intro.png";
 import { useRecoilState } from "recoil";
 import { modalAtom } from "atoms/atom";
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
   const { data: session, status } = useSession<any>({ required: false });
   const [boardMaster, setBoardMaster] = useState();
   const [modal, setModal] = useRecoilState(modalAtom);
-  const [hidden, setHidden] = useState();
+  const [hidden, setHidden] = useState<boolean>();
   const [boardMasternickname, setBoardMasterNickname] = useState();
   const [postList, setPostList] = useState<any>([]);
   const [currentUrl, setCurrentUrl] = useState("");
+  const blank = "client_assets/blank.png";
   // console.log(router.query.pid);
   const pid = router.query.pid;
   const getBoardMaster = () => {
@@ -44,6 +46,23 @@ export default function Home() {
       .then(function (res) {
         console.log(res);
         setPostList(res.data.posts);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+  const changeHiddenState = () => {
+    axios
+      .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/hidden/change", {
+        email: session?.user?.email,
+      })
+      .then(function (res) {
+        console.log(res);
+        if (res.data.status === "201 Updated") {
+          setHidden(res.data.hiddenAfter);
+        } else {
+          alert("공개 상태를 바꾸는 데 실패했습니다. 다시 시도해주세요.");
+        }
       })
       .catch(function (error) {
         console.log(error);
@@ -105,28 +124,44 @@ export default function Home() {
             router.push(pid + "/upload");
           }}
         >
+          <img src={intro.src} />
           사진 올리기
         </S.Btn>
+        {session?.user?.email === boardMaster && (
+          <S.SetHiddenConatainer>
+            <S.SetHiddenBtn onClick={changeHiddenState}>
+              {hidden && <span>내 앨범 비공개</span>}
+              {!hidden && <span>내 앨범 공개</span>}
+              <input role="switch" type="checkbox" checked={hidden} />
+            </S.SetHiddenBtn>
+          </S.SetHiddenConatainer>
+        )}
+
         {session?.user?.email !== boardMaster && (
           <S.BtnWrapper>
             <S.SubBtn1 color="#FFD275" onClick={onClickEnter}>
-              내 앨범 만들기
+              내 앨범으로
             </S.SubBtn1>
-            <S.SubBtn2 color="white" onClick={onClickEnter}>
-              내 앨범 보기
+            <S.SubBtn2
+              color="white"
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              처음으로
             </S.SubBtn2>
           </S.BtnWrapper>
         )}
         {/* 여기{hidden && <p>숨긴 유저입니다</p>} */}
 
-        {postList.length > 0 && (
+        {postList.length > 0 && session?.user?.email === boardMaster && (
           <div style={{ width: "100%", marginBottom: "8rem" }}>
             <S.PostListInfo>
               좌우로 밀어서 친구들이 남긴 사진을 확인해보세요!
             </S.PostListInfo>
             <S.PostListContainer>
               {postList.map((post: any, idx: number) => (
-                <S.FrameBox key={post.post_pk}>
+                <S.FrameBox key={post.post_pk} id={post.frame}>
                   <ShowFrame
                     color={post.color}
                     frame={post.frame}
@@ -171,7 +206,8 @@ export default function Home() {
                             file4={post.images.image4}
                             letter={post.letter}
                             author={post.title}
-                            key={post.post_pk}
+                            id={post.post_pk}
+                            master={boardMaster}
                           ></DetailFrame>
                         </S.ModalPostWrapper>
                         {/* <S.ModalInfoContainer> */}
@@ -194,6 +230,100 @@ export default function Home() {
             </S.PostListContainer>
           </div>
         )}
+        {postList.length > 0 &&
+          session?.user?.email !== boardMaster &&
+          !hidden && (
+            <div style={{ width: "100%", marginBottom: "8rem" }}>
+              <S.PostListInfo>
+                좌우로 밀어서 {boardMasternickname}님의 사진을 확인해보세요!
+              </S.PostListInfo>
+              <S.PostListContainer>
+                {postList.map((post: any, idx: number) => (
+                  <S.FrameBox key={post.post_pk} id={post.frame}>
+                    <ShowFrame
+                      color={post.color}
+                      frame={post.frame}
+                      file1={post.images.image1}
+                      file2={post.images.image2}
+                      file3={post.images.image3}
+                      file4={post.images.image4}
+                      letter={post.letter}
+                      author={post.title}
+                      key={post.post_pk}
+                      id={post.post_pk}
+                    ></ShowFrame>
+                    {modal === post.post_pk && (
+                      <div style={{ zIndex: "3" }}>
+                        <S.ModalBg
+                          onClick={() => {
+                            setModal(false);
+                          }}
+                        ></S.ModalBg>
+                        <S.ModalPostContainer>
+                          <S.ModalInfoContainer>
+                            <div></div>
+                            <p style={{ color: "white" }}>
+                              {post.title}님의 사진
+                            </p>
+                            <div
+                              style={{ color: "white" }}
+                              onClick={() => {
+                                setModal(false);
+                              }}
+                            >
+                              X
+                            </div>
+                          </S.ModalInfoContainer>
+                          <S.ModalPostWrapper>
+                            <DetailFrame
+                              color={post.color}
+                              frame={post.frame}
+                              file1={post.images.image1}
+                              file2={post.images.image2}
+                              file3={post.images.image3}
+                              file4={post.images.image4}
+                              letter={post.letter}
+                              author={post.title}
+                              key={post.post_pk}
+                              id={post.post_pk}
+                              master={boardMaster}
+                            ></DetailFrame>
+                          </S.ModalPostWrapper>
+                        </S.ModalPostContainer>
+                      </div>
+                    )}
+                  </S.FrameBox>
+                ))}
+              </S.PostListContainer>
+            </div>
+          )}
+        {postList.length > 0 &&
+          session?.user?.email !== boardMaster &&
+          hidden && (
+            <div style={{ width: "100%", marginBottom: "8rem" }}>
+              <S.PostListInfo>
+                {boardMasternickname}님의 앨범은 비공개 상태입니다!
+              </S.PostListInfo>
+              <S.PostListContainer>
+                {postList.map((post: any, idx: number) => (
+                  <S.FrameBox key={post.post_pk} id={post.frame}>
+                    <ShowFrame
+                      color={post.color}
+                      frame={post.frame}
+                      file1={blank}
+                      file2={blank}
+                      file3={blank}
+                      file4={blank}
+                      letter={post.letter}
+                      author={post.title}
+                      key={post.post_pk}
+                      id={post.post_pk}
+                    ></ShowFrame>
+                  </S.FrameBox>
+                ))}
+              </S.PostListContainer>
+            </div>
+          )}
         {postList.length === 0 && (
           <S.NoPostContainer>
             <S.NoPostInfo>

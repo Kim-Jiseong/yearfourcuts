@@ -2,17 +2,24 @@ import styled from "styled-components";
 // import { colors } from 'styles/theme'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 90%;
   min-height: 100vh;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   position: relative;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   /* border: 1px solid black; */
 `;
 
+export const ImageContainer = styled.div`
+  width: 40%;
+  object-fit: contain;
+  & img {
+    width: 100%;
+  }
+`;
 export const ContentContainer = styled.div`
   width: 50%;
   display: flex;

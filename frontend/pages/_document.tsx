@@ -5,6 +5,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -35,16 +36,32 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>일년네컷</title>
-
+          <meta property="og:title" content="일년네컷" />
+          <meta
+            property="og:description"
+            content="너랑 나랑 사진으로 남긴 올해의 추억"
+          />
+          <link rel="icon" href="/static/favicon.ico" />
+          <meta
+            property="og:image"
+            content="https://yearfourcuts.s3.ap-northeast-2.amazonaws.com/client_assets/thumbnail.png"
+          />
+          <meta
+            name="Keywords"
+            content="일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+          />
+          <meta
+            name="keywords"
+            content="일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+          />
+          <meta
+            name="Description"
+            content="너랑 나랑 사진으로 남긴 올해의 추억"
+          />
           <meta name="description" content="일년네컷" />
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-          ></link>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
           ></link>
           {/* <script src="node_modules/eruda/eruda.js"></script>
           <script>eruda.init();</script> */}

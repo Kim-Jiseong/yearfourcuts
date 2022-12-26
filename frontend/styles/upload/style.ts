@@ -34,10 +34,10 @@ export const InfoContainer = styled.div`
   font-family: "SlowSlow";
   display: flex;
   flex-direction: column;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   align-items: center;
   &:last-child {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
 `;
 export const SubTitle = styled.div`
@@ -117,23 +117,28 @@ export const Letter = styled.textarea`
   font-size: 2.4rem;
   padding: 1rem;
 `;
-
-export const Btn = styled.div`
+export const BtnWrapper = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const Btn = styled.div`
+  width: 48%;
   height: 6rem;
-  background: white;
+  background: ${(props) => props.color};
   box-shadow: 0px 3px 6px #00000029;
   border: 2px solid #1d1b1c;
   border-radius: 12px;
   margin-top: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #1d1b1c;
   font-size: 1.8rem;
-  /* font-weight: 700; */
+  font-weight: 600;
 `;
 export const LoadingContainer = styled.div`
   width: 100%;

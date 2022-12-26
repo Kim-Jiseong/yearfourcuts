@@ -30,7 +30,7 @@ export const SubTitle = styled.div`
   color: #4f3500;
   /* font-weight: 700; */
   /* text-align: center; */
-  font-size: 2.4rem;
+  font-size: 2rem;
   margin-bottom: 2.2rem;
   /* font-family: "N"; */
 `;

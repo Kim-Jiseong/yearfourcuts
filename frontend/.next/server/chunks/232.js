@@ -31,7 +31,7 @@ const frameAtom = (0,recoil__WEBPACK_IMPORTED_MODULE_0__.atom)({
 });
 const colorAtom = (0,recoil__WEBPACK_IMPORTED_MODULE_0__.atom)({
     key: "color",
-    default: "#FFD275"
+    default: "#FFFFFF"
 });
 const file1Atom = (0,recoil__WEBPACK_IMPORTED_MODULE_0__.atom)({
     key: "file1",

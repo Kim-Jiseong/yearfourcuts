@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 8048:
+/***/ 9481:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -152,7 +152,11 @@ const GlobalStyle = ({ children  })=>{
 var react_ = __webpack_require__(1649);
 // EXTERNAL MODULE: external "recoil"
 var external_recoil_ = __webpack_require__(9755);
+;// CONCATENATED MODULE: external "next/head"
+const head_namespaceObject = require("next/head");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
 ;// CONCATENATED MODULE: ./pages/_app.tsx
+
 
 
 
@@ -162,10 +166,17 @@ function App({ Component , pageProps  }) {
     return /*#__PURE__*/ jsx_runtime_.jsx(react_.SessionProvider, {
         session: pageProps.session,
         children: /*#__PURE__*/ jsx_runtime_.jsx(external_recoil_.RecoilRoot, {
-            children: /*#__PURE__*/ jsx_runtime_.jsx(styles_GlobalStyle, {
-                children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-                    ...pageProps
-                })
+            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)(styles_GlobalStyle, {
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx((head_default()), {
+                        children: /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                            children: "일년네컷"
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Component, {
+                        ...pageProps
+                    })
+                ]
             })
         })
     });
@@ -216,7 +227,7 @@ module.exports = require("styled-components");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(8048));
+var __webpack_exports__ = (__webpack_exec__(9481));
 module.exports = __webpack_exports__;
 
 })();

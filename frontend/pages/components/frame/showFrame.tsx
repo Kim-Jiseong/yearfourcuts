@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef, useCallback } from "react";
-import * as S from "styles/components/frame1/style";
+import * as S from "styles/components/showframe/frame1/style";
 import * as T from "styles/components/frame2/style";
 import * as M from "styles/components/frame3/style";
 import Blank from "public/img/blank.png";
@@ -25,7 +25,6 @@ export default function ShowFrame(props: any) {
   const [letter, setLetter] = useState<any>(props.letter);
   const [author, setAuthor] = useState<any>(props.author);
   const [pk, setPk] = useState<any>(props.id);
-
   return (
     <div
       onClick={() => {
@@ -51,7 +50,7 @@ export default function ShowFrame(props: any) {
               </S.PhotoWrapper>
             </S.PhotoContainer>
 
-            <S.PhotoContainer2>
+            {/* <S.PhotoContainer2>
               <S.PhotoWrapperGrey>
                 <img src={file1 ? file1 : Blank.src}></img>
               </S.PhotoWrapperGrey>
@@ -64,7 +63,7 @@ export default function ShowFrame(props: any) {
               <S.PhotoWrapperGrey>
                 <img src={file4 ? file4 : Blank.src}></img>
               </S.PhotoWrapperGrey>
-            </S.PhotoContainer2>
+            </S.PhotoContainer2> */}
             <S.Author>{author}</S.Author>
           </S.Container>
         </div>

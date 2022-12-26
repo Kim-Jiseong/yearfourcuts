@@ -31,15 +31,26 @@ export default function Upload(props: any) {
         <div>사진을 올려주세요</div>
       </S.InfoContainer>
       <Frame></Frame>
-      <S.Btn
-        onClick={() => {
-          if (frame && selColor && file1 && file2 && file3 && file4) {
-            setPage(3);
-          }
-        }}
-      >
-        다음으로
-      </S.Btn>
+      <S.BtnWrapper>
+        <S.Btn
+          color="white"
+          onClick={() => {
+            setPage(page - 1);
+          }}
+        >
+          이전으로
+        </S.Btn>
+        <S.Btn
+          color="#FF7575"
+          onClick={() => {
+            if (frame && selColor && file1 && file2 && file3 && file4) {
+              setPage(3);
+            }
+          }}
+        >
+          다음으로
+        </S.Btn>
+      </S.BtnWrapper>
     </S.Container>
   );
 }

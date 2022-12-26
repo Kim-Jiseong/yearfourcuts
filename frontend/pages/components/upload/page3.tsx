@@ -105,7 +105,7 @@ export default function Upload(props: any) {
         <div>Step 3</div>
         <div>메시지를 남겨주세요</div>
       </S.InfoContainer>
-      <S.SubTitle>작성</S.SubTitle>
+      <S.SubTitle>from.</S.SubTitle>
       <S.Author
         onChange={authorInput}
         maxLength={8}
@@ -118,6 +118,8 @@ export default function Upload(props: any) {
         onChange={handleResizeHeight}
       ></S.Letter>
       <S.Btn
+        style={{ width: "100%" }}
+        color="#FF7575"
         onClick={() => {
           if (
             frame &&

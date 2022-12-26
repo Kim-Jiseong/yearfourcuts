@@ -14,6 +14,8 @@ exports.modules = {
 /* harmony export */   "J4": () => (/* binding */ NoPostInfo),
 /* harmony export */   "Ld": () => (/* binding */ PostListContainer),
 /* harmony export */   "MA": () => (/* binding */ SubBtn2),
+/* harmony export */   "NY": () => (/* binding */ SetHiddenBtn),
+/* harmony export */   "Rp": () => (/* binding */ SetHiddenConatainer),
 /* harmony export */   "W2": () => (/* binding */ Container),
 /* harmony export */   "YC": () => (/* binding */ ModalInfoContainer),
 /* harmony export */   "Yq": () => (/* binding */ SubBtn1),
@@ -36,7 +38,7 @@ exports.modules = {
 
 // import { colors } from 'styles/theme'
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-0"
+    componentId: "sc-de00cac0-0"
 })`
   width: 100%;
   min-height: 100vh;
@@ -49,7 +51,7 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.w
   /* border: 1px solid black; */
 `;
 const Header = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-1"
+    componentId: "sc-de00cac0-1"
 })`
   width: 100%;
   height: 6.2rem;
@@ -61,7 +63,7 @@ const Header = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.with
   top: 0;
 `;
 const HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-2"
+    componentId: "sc-de00cac0-2"
 })`
   width: 90%;
   display: flex;
@@ -72,7 +74,7 @@ const HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_0___default().d
   }
 `;
 const SubTitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-3"
+    componentId: "sc-de00cac0-3"
 })`
   color: #4f3500;
   /* font-weight: 700; */
@@ -83,7 +85,7 @@ const SubTitle = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.wi
   font-family: "SlowSlow";
 `;
 const ControlContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-4"
+    componentId: "sc-de00cac0-4"
 })`
   display: flex;
   flex-direction: column;
@@ -91,7 +93,7 @@ const ControlContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default(
   width: 80%;
 `;
 const Btn = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-5"
+    componentId: "sc-de00cac0-5"
 })`
   width: 100%;
   height: 8.4rem;
@@ -107,10 +109,15 @@ const Btn = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withCon
   font-size: 1.6rem;
   color: white;
   font-size: 1.8rem;
-  /* font-weight: 700; */
+  position: relative;
+  & img {
+    position: absolute;
+    left: -20px;
+    width: 20%;
+  }
 `;
 const BtnWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-6"
+    componentId: "sc-de00cac0-6"
 })`
   margin-top: 1rem;
   width: 100%;
@@ -118,20 +125,20 @@ const BtnWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.
   justify-content: space-between;
 `;
 const SubBtn1 = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(Btn).withConfig({
-    componentId: "sc-fbe50663-7"
+    componentId: "sc-de00cac0-7"
 })`
   width: 50%;
   height: 5.6rem;
 `;
 const SubBtn2 = styled_components__WEBPACK_IMPORTED_MODULE_0___default()(Btn).withConfig({
-    componentId: "sc-fbe50663-8"
+    componentId: "sc-de00cac0-8"
 })`
   width: 45%;
   height: 5.6rem;
   color: black;
 `;
 const NoPostContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-9"
+    componentId: "sc-de00cac0-9"
 })`
   width: 100%;
   padding-bottom: 120%;
@@ -143,7 +150,7 @@ const NoPostContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default()
   position: relative;
 `;
 const NoPostInfo = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-10"
+    componentId: "sc-de00cac0-10"
 })`
   width: 100%;
   font-family: "slowslow";
@@ -155,7 +162,7 @@ const NoPostInfo = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.
   transform: translate(-50%, -50%);
 `;
 const ShareContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-11"
+    componentId: "sc-de00cac0-11"
 })`
   width: 100px;
   margin: 0 auto;
@@ -164,12 +171,12 @@ const ShareContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().
   align-items: center;
 `;
 const URLShareWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-12"
+    componentId: "sc-de00cac0-12"
 })`
   margin: 2rem;
 `;
 const URLShareInput = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-13"
+    componentId: "sc-de00cac0-13"
 })`
   width: 80%;
   height: 3.5rem;
@@ -191,10 +198,10 @@ const URLShareInput = styled_components__WEBPACK_IMPORTED_MODULE_0___default().d
   }
 `;
 const URLShareButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default().button.withConfig({
-    componentId: "sc-fbe50663-14"
+    componentId: "sc-de00cac0-14"
 })``;
 const PostListContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-15"
+    componentId: "sc-de00cac0-15"
 })`
   width: 100%;
   overflow-x: scroll;
@@ -202,7 +209,7 @@ const PostListContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default
   display: block;
 `;
 const PostListInfo = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-16"
+    componentId: "sc-de00cac0-16"
 })`
   font-family: "SlowSlow";
   text-align: center;
@@ -211,15 +218,18 @@ const PostListInfo = styled_components__WEBPACK_IMPORTED_MODULE_0___default().di
   margin-bottom: 2rem;
 `;
 const FrameBox = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-17"
+    componentId: "sc-de00cac0-17"
 })`
   width: 210px;
+  ${(props)=>props.id === 1 && styled_components__WEBPACK_IMPORTED_MODULE_0__.css`
+      width: 105px;
+    `}
   /* padding-bottom: 150%; */
   margin-right: 2rem;
   display: inline-block;
 `;
 const ModalBg = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-18"
+    componentId: "sc-de00cac0-18"
 })`
   position: fixed;
   width: 100%;
@@ -234,7 +244,7 @@ const ModalBg = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.wit
   cursor: pointer;
 `;
 const ModalContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-19"
+    componentId: "sc-de00cac0-19"
 })`
   position: fixed;
   background-color: white;
@@ -246,9 +256,9 @@ const ModalContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().
   transform: translate(-50%, -50%);
 `;
 const ModalInfoContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-20"
+    componentId: "sc-de00cac0-20"
 })`
-  width: 80%;
+  width: 90%;
   text-align: center;
   display: flex;
   margin: 0 auto;
@@ -260,7 +270,7 @@ const ModalInfoContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___defaul
   }
 `;
 const ModalPostContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-21"
+    componentId: "sc-de00cac0-21"
 })`
   width: 90%;
   max-width: 387px;
@@ -274,10 +284,53 @@ const ModalPostContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___defaul
   transform: translate(-50%, -50%);
 `;
 const ModalPostWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
-    componentId: "sc-fbe50663-22"
+    componentId: "sc-de00cac0-22"
 })`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+`;
+const SetHiddenConatainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default().div.withConfig({
+    componentId: "sc-de00cac0-23"
+})`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+`;
+const SetHiddenBtn = styled_components__WEBPACK_IMPORTED_MODULE_0___default().label.withConfig({
+    componentId: "sc-de00cac0-24"
+})`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  & input {
+    appearance: none;
+    position: relative;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 1.25em;
+    width: 6rem;
+    height: 3.25rem;
+  }
+  & input::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    transform: scale(0.8);
+    background-color: gray;
+    transition: left 250ms linear;
+  }
+  & input:checked::before {
+    background-color: white;
+    left: 2.75rem;
+  }
+  & input:checked {
+    background-color: tomato;
+    border-color: tomato;
+  }
 `;
 
 
