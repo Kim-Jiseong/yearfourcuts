@@ -41,7 +41,7 @@ export const InfoContainer = styled.div`
   }
 `;
 export const SubTitle = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   /* font-weight: 700; */
   margin: 2rem 0 2rem 0;
 `;
@@ -107,6 +107,11 @@ export const Author = styled.input`
   font-size: 2.4rem;
   padding: 1rem;
   padding-top: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 export const Letter = styled.textarea`
   width: 100%;
@@ -116,6 +121,11 @@ export const Letter = styled.textarea`
   resize: none;
   font-size: 2.4rem;
   padding: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 export const BtnWrapper = styled.div`
   width: 100%;

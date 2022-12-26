@@ -130,9 +130,9 @@ export default function Home() {
         {session?.user?.email === boardMaster && (
           <S.SetHiddenConatainer>
             <S.SetHiddenBtn onClick={changeHiddenState}>
-              {hidden && <span>내 앨범 비공개</span>}
-              {!hidden && <span>내 앨범 공개</span>}
+              <span>내 앨범 공개</span>
               <input role="switch" type="checkbox" checked={hidden} />
+              <span>비공개</span>
             </S.SetHiddenBtn>
           </S.SetHiddenConatainer>
         )}
@@ -152,7 +152,6 @@ export default function Home() {
             </S.SubBtn2>
           </S.BtnWrapper>
         )}
-        {/* 여기{hidden && <p>숨긴 유저입니다</p>} */}
 
         {postList.length > 0 && session?.user?.email === boardMaster && (
           <div style={{ width: "100%", marginBottom: "8rem" }}>

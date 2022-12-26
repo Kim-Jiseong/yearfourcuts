@@ -31,7 +31,7 @@ exports.modules = {
 //   prop?: any;
 // }
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-0"
+    componentId: "sc-5c41cfd0-0"
 })`
   width: 100%;
   /* min-height: 100vh; */
@@ -48,7 +48,7 @@ const Container = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.w
   /* align-items: center; */
 `;
 const PhotoContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-1"
+    componentId: "sc-5c41cfd0-1"
 })`
   width: 50%;
   display: flex;
@@ -65,7 +65,7 @@ const PhotoContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default().
   left: 0;
 `;
 const PhotoContainer2 = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-2"
+    componentId: "sc-5c41cfd0-2"
 })`
   width: 50%;
   display: flex;
@@ -82,7 +82,7 @@ const PhotoContainer2 = styled_components__WEBPACK_IMPORTED_MODULE_1___default()
   right: 0;
 `;
 const PhotoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-3"
+    componentId: "sc-5c41cfd0-3"
 })`
   background-color: white;
   width: 90%;
@@ -102,12 +102,12 @@ const PhotoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().di
   /* position: absolute; */
 `;
 const PhotoWrapperGrey = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(PhotoWrapper).withConfig({
-    componentId: "sc-da6e6f8-4"
+    componentId: "sc-5c41cfd0-4"
 })`
   filter: grayscale();
 `;
 const Author = styled_components__WEBPACK_IMPORTED_MODULE_1___default().p.withConfig({
-    componentId: "sc-da6e6f8-5"
+    componentId: "sc-5c41cfd0-5"
 })`
   font-family: "SlowSlow";
   font-size: 2rem;
@@ -119,7 +119,7 @@ const Author = styled_components__WEBPACK_IMPORTED_MODULE_1___default().p.withCo
   border-radius: 8px;
 `;
 const MailIcon = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-6"
+    componentId: "sc-5c41cfd0-6"
 })`
   /* width: auto; */
   /* position: absolute; */
@@ -128,19 +128,25 @@ const MailIcon = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.wi
   /* right: 0; */
   /* bottom: 0px; */
   background: white;
-  padding: 1rem 1rem 0.9rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  margin-right: 1rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  & i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &:hover {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
   }
 `;
 const LetterModal = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-7"
+    componentId: "sc-5c41cfd0-7"
 })`
   position: absolute;
   width: 100%;
@@ -148,21 +154,24 @@ const LetterModal = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   z-index: 2;
   top: 0;
   left: 0;
   overflow: hidden;
   cursor: pointer;
-  text-align: center;
   word-wrap: break-word;
   & p {
+    margin-top: 10%;
     width: 80%;
+    max-height: 80%;
     font-family: "SlowSlow";
     font-size: 2rem;
     font-weight: 600;
+    overflow-y: auto;
     white-space: pre-line;
+    text-align: left;
     /* word-wrap: break-word; */
   }
   & p:last-child {
@@ -173,18 +182,15 @@ const LetterModal = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div
   }
 `;
 const BtnWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default().div.withConfig({
-    componentId: "sc-da6e6f8-8"
+    componentId: "sc-5c41cfd0-8"
 })`
-  width: 100%;
+  width: 40%;
   position: absolute;
-  left: 50%;
-  bottom: 0px;
-  transform: translate(-50%, 0);
-  /* background: red; */
+  bottom: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 `;
 
 

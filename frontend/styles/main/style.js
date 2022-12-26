@@ -66,7 +66,7 @@ export const Btn = styled.div`
   & img {
     position: absolute;
     left: -20px;
-    width: 20%;
+    width: 17%;
   }
 `;
 export const BtnWrapper = styled.div`
@@ -107,6 +107,7 @@ export const NoPostInfo = styled.div`
 export const ShareContainer = styled.div`
   width: 100px;
   margin: 0 auto;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,7 +116,7 @@ export const URLShareWrapper = styled.div`
   margin: 2rem;
 `;
 export const URLShareInput = styled.div`
-  width: 80%;
+  width: 90%;
   height: 3.5rem;
   background: #ffffff;
   box-shadow: inset 0px 2px 6px #00000029;
@@ -173,6 +174,7 @@ export const ModalBg = styled.div`
   cursor: pointer;
 `;
 export const ModalContainer = styled.div`
+  width: 80%;
   position: fixed;
   background-color: white;
   border-radius: 20px;
@@ -222,6 +224,9 @@ export const SetHiddenBtn = styled.label`
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  & span {
+    font-size: 1.4rem;
+  }
   & input {
     appearance: none;
     position: relative;
@@ -246,7 +251,8 @@ export const SetHiddenBtn = styled.label`
     left: 2.75rem;
   }
   & input:checked {
-    background-color: tomato;
-    border-color: tomato;
+    background-color: #ff7575;
+    border-color: #ff7575;
+    /* border-color: #ff7575; */
   }
 `;

@@ -92,13 +92,19 @@ export const MailIcon = styled.div`
   /* right: 0; */
   /* bottom: 0px; */
   background: white;
-  padding: 1rem 1rem 0.9rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  margin-right: 1rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  & i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &:hover {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
   }
@@ -110,21 +116,24 @@ export const LetterModal = styled.div`
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   z-index: 2;
   top: 0;
   left: 0;
   overflow: hidden;
   cursor: pointer;
-  text-align: center;
   word-wrap: break-word;
   & p {
+    margin-top: 10%;
     width: 80%;
+    max-height: 80%;
     font-family: "SlowSlow";
     font-size: 2rem;
     font-weight: 600;
+    overflow-y: auto;
     white-space: pre-line;
+    text-align: left;
     /* word-wrap: break-word; */
   }
   & p:last-child {
@@ -135,14 +144,11 @@ export const LetterModal = styled.div`
   }
 `;
 export const BtnWrapper = styled.div`
-  width: 100%;
+  width: 40%;
   position: absolute;
-  left: 50%;
-  bottom: 0px;
-  transform: translate(-50%, 0);
-  /* background: red; */
+  bottom: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 `;

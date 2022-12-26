@@ -121,16 +121,7 @@ export default function Upload(props: any) {
         style={{ width: "100%" }}
         color="#FF7575"
         onClick={() => {
-          if (
-            frame &&
-            selColor &&
-            file1 &&
-            file2 &&
-            file3 &&
-            file4 &&
-            letter &&
-            author
-          ) {
+          if (frame && selColor && file1 && file2 && file3 && file4 && author) {
             setPage("loading");
             sendFormData();
           }
