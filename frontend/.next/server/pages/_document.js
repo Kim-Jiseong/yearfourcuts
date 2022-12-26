@@ -68,11 +68,11 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             name: "Keywords",
-                            content: "일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+                            content: "일년네컷: 너랑 나랑 사진으로 남긴 올해의 추억, 일년 네컷"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             name: "keywords",
-                            content: "일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+                            content: "일년네컷: 너랑 나랑 사진으로 남긴 올해의 추억, 일년 네컷"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             name: "Description",

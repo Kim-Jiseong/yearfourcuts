@@ -48,11 +48,11 @@ export default class MyDocument extends Document {
           />
           <meta
             name="Keywords"
-            content="일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+            content="일년네컷: 너랑 나랑 사진으로 남긴 올해의 추억, 일년 네컷"
           />
           <meta
             name="keywords"
-            content="일년 네컷, 너랑 나랑 사진으로 남긴 올해의 추억"
+            content="일년네컷: 너랑 나랑 사진으로 남긴 올해의 추억, 일년 네컷"
           />
           <meta
             name="Description"
