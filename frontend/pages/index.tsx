@@ -9,7 +9,7 @@ export default function Intro() {
   const { data: session, status } = useSession<any>({ required: false });
   const [browserType, setBrowserType] = useState("");
   const [isKakaoBrower, setKakaoBrower] = useState(false);
-  const onClickEnter = () => {
+  const onClickGoogle = () => {
     if (isKakaoBrower) {
       alert(
         "카카오 인앱 브라우저에서는 구글 로그인이 지원되지 않습니다. 다른 브라우저로 접속해주세요"
@@ -23,18 +23,12 @@ export default function Intro() {
       }
     }
   };
-  const onClickCreate = () => {
-    if (isKakaoBrower) {
-      alert(
-        "카카오 인앱 브라우저에서는 회원가입이 지원되지 않습니다. 다른 브라우저로 접속해주세요"
-      );
+  const onClickKakao = () => {
+    if (status === "authenticated") {
+      console.log(session);
+      router.push("signup");
     } else {
-      if (status === "authenticated") {
-        console.log(session);
-        router.push("signup");
-      } else {
-        signIn("google", { callbackUrl: "/signup" });
-      }
+      signIn("kakao", { callbackUrl: "/signup" });
     }
   };
 
@@ -70,14 +64,8 @@ export default function Intro() {
         )}
         {status !== "authenticated" && (
           <div style={{ width: "100%" }}>
-            <S.Btn onClick={onClickEnter}>구글로 시작하기</S.Btn>
-            <S.Btn
-              onClick={() => {
-                signIn("kakao", { callbackUrl: "/signup" });
-              }}
-            >
-              카카오로 시작하기
-            </S.Btn>
+            <S.Btn onClick={onClickGoogle}>구글로 시작하기</S.Btn>
+            <S.Btn onClick={onClickKakao}>카카오로 시작하기</S.Btn>
           </div>
 
           // <S.Btn onClick={onClickCreate}>내 앨범 만들기</S.Btn>
