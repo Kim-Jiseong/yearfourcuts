@@ -39,7 +39,8 @@ var kakao_default = /*#__PURE__*/__webpack_require__.n(kakao_namespaceObject);
         }),
         kakao_default()({
             clientId: process.env.KAKAO_CLIENT_ID,
-            clientSecret: process.env.KAKAO_CLIENT_SECRET
+            clientSecret: process.env.KAKAO_CLIENT_SECRET,
+            checks: "both"
         })
     ],
     callbacks: {
