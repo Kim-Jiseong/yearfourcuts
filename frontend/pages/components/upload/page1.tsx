@@ -42,7 +42,7 @@ export default function Upload(props: any) {
     <S.Container>
       <S.InfoContainer>
         <div>Step 1</div>
-        <div>템플릿을 골라주세요</div>
+        <div>프레임 모양을 골라주세요</div>
       </S.InfoContainer>
       <S.SubTitle>모양 {frame}</S.SubTitle>
       <S.FrameContainer>

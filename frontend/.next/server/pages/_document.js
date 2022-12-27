@@ -60,7 +60,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "icon",
-                            href: "/static/favicon.ico"
+                            href: "https://yearfourcuts.s3.ap-northeast-2.amazonaws.com/client_assets/favicon.ico"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                             property: "og:image",

@@ -118,7 +118,7 @@ export default function Upload(props: any) {
         onChange={handleResizeHeight}
       ></S.Letter>
       <S.Btn
-        style={{ width: "100%" }}
+        style={{ width: "100%", color: "white" }}
         color="#FF7575"
         onClick={() => {
           if (frame && selColor && file1 && file2 && file3 && file4 && author) {

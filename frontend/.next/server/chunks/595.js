@@ -147,7 +147,8 @@ function Upload(props) {
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
                 style: {
-                    width: "100%"
+                    width: "100%",
+                    color: "white"
                 },
                 color: "#FF7575",
                 onClick: ()=>{

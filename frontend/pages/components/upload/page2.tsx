@@ -44,7 +44,7 @@ export default function Upload(props: any) {
     <S.Container>
       <S.InfoContainer>
         <div>Step 2</div>
-        <div>사진을 올려주세요</div>
+        <div>프레임 컬러를 고르고, 사진을 올려주세요</div>
       </S.InfoContainer>
       <Frame></Frame>
       <S.SubTitle>컬러</S.SubTitle>
@@ -79,6 +79,7 @@ export default function Upload(props: any) {
         </S.Btn>
         <S.Btn
           color="#FF7575"
+          style={{ color: "white" }}
           onClick={() => {
             if (frame && selColor && file1 && file2 && file3 && file4) {
               setPage(3);

@@ -48,7 +48,7 @@ var atom = __webpack_require__(7232);
 
 
 const Frame = external_styled_components_default().img.withConfig({
-    componentId: "sc-d14ffba-0"
+    componentId: "sc-60fb95f6-0"
 })`
   padding: calc(1rem + 2px);
   height: calc(100% + 2px);
@@ -77,7 +77,7 @@ function Upload(props) {
                         children: "Step 1"
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                        children: "템플릿을 골라주세요"
+                        children: "프레임 모양을 골라주세요"
                     })
                 ]
             }),

@@ -63,7 +63,7 @@ function Upload(props) {
                         children: "Step 2"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        children: "사진을 올려주세요"
+                        children: "프레임 컬러를 고르고, 사진을 올려주세요"
                     })
                 ]
             }),
@@ -98,6 +98,9 @@ function Upload(props) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_upload_style__WEBPACK_IMPORTED_MODULE_2__/* .Btn */ .un, {
                         color: "#FF7575",
+                        style: {
+                            color: "white"
+                        },
                         onClick: ()=>{
                             if (frame && selColor && file1 && file2 && file3 && file4) {
                                 setPage(3);

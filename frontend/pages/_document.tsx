@@ -41,7 +41,10 @@ export default class MyDocument extends Document {
             property="og:description"
             content="너랑 나랑 사진으로 남긴 올해의 추억"
           />
-          <link rel="icon" href="/static/favicon.ico" />
+          <link
+            rel="icon"
+            href="https://yearfourcuts.s3.ap-northeast-2.amazonaws.com/client_assets/favicon.ico"
+          />
           <meta
             property="og:image"
             content="https://yearfourcuts.s3.ap-northeast-2.amazonaws.com/client_assets/thumbnail.png"
