@@ -7,6 +7,7 @@ import intro from "public/img/intro.png";
 export default function Intro() {
   const router = useRouter();
   const { data: session, status } = useSession<any>({ required: false });
+  const [browserType, setBrowserType] = useState("");
   const [isKakaoBrower, setKakaoBrower] = useState(false);
   const onClickEnter = () => {
     if (isKakaoBrower) {
@@ -38,6 +39,7 @@ export default function Intro() {
   };
 
   useEffect(() => {
+    setBrowserType(navigator.userAgent);
     const isKakao = navigator.userAgent.match("KAKAOTALK");
     console.log(navigator.userAgent);
     // alert(isKakao);
@@ -60,6 +62,7 @@ export default function Intro() {
         {status !== "authenticated" && (
           <S.Btn onClick={onClickCreate}>내 앨범 만들기</S.Btn>
         )}
+        {/* {browserType} */}
         {/* {session && <div>{session?.user?.email}</div>} */}
         {/* {isKakaoBrower && <div>카카오임</div>}
         {!isKakaoBrower && <div>카카오 아님</div>} */}
