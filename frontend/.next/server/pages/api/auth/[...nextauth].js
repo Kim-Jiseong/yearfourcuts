@@ -5,7 +5,7 @@ exports.id = 748;
 exports.ids = [748];
 exports.modules = {
 
-/***/ 1284:
+/***/ 7288:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -22,14 +22,24 @@ var next_default = /*#__PURE__*/__webpack_require__.n(next_namespaceObject);
 ;// CONCATENATED MODULE: external "next-auth/providers/google"
 const google_namespaceObject = require("next-auth/providers/google");
 var google_default = /*#__PURE__*/__webpack_require__.n(google_namespaceObject);
+;// CONCATENATED MODULE: external "next-auth/providers/kakao"
+const kakao_namespaceObject = require("next-auth/providers/kakao");
+var kakao_default = /*#__PURE__*/__webpack_require__.n(kakao_namespaceObject);
 ;// CONCATENATED MODULE: ./pages/api/auth/[...nextauth].js
+
 
 
 /* harmony default export */ const _nextauth_ = (next_default()({
     providers: [
         google_default()({
             clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            // checks: ["pkce", "state"], // both
+            checks: "both"
+        }),
+        kakao_default()({
+            clientId: process.env.KAKAO_CLIENT_ID,
+            clientSecret: process.env.KAKAO_CLIENT_SECRET
         })
     ],
     callbacks: {
@@ -61,7 +71,7 @@ var google_default = /*#__PURE__*/__webpack_require__.n(google_namespaceObject);
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(1284));
+var __webpack_exports__ = (__webpack_exec__(7288));
 module.exports = __webpack_exports__;
 
 })();

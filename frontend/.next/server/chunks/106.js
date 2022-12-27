@@ -28,7 +28,7 @@ var frame3_style = __webpack_require__(1850);
 var external_browser_image_compression_ = __webpack_require__(1022);
 var external_browser_image_compression_default = /*#__PURE__*/__webpack_require__.n(external_browser_image_compression_);
 ;// CONCATENATED MODULE: ./public/img/upload.png
-/* harmony default export */ const upload = ({"src":"/_next/static/media/upload.8585da39.png","height":249,"width":375,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAAAAABd+vKJAAAAKklEQVR42mP4/+8/EPz7z/Dv/7+vX//9/wdk/Hj9+geY8e/Dh79ABkwNAHbFJ2LLZ7Z/AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":5});
+/* harmony default export */ const upload = ({"src":"/_next/static/media/upload.79300018.png","height":254,"width":382,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAAAAABd+vKJAAAAKElEQVR42mP4//8fGDH8+/f/56////4x/Pv//+kzMOPf/+/fQQyYGgB42Cd8DlAThgAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":5});
 ;// CONCATENATED MODULE: ./public/img/upload2.png
 /* harmony default export */ const upload2 = ({"src":"/_next/static/media/upload2.d2692f67.png","height":409,"width":326,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAAAAAD/rdHkAAAAJklEQVR42mP4BwYM//7/AyKG///+AxGQ9+Pnf5Dg9+9wQYgSmEoANRgvmhboNl4AAAAASUVORK5CYII=","blurWidth":6,"blurHeight":8});
 // EXTERNAL MODULE: ./public/img/blank.png
@@ -88,12 +88,9 @@ function Frame1(props) {
         }
     };
     const inputRef1 = (0,external_react_.useRef)(null);
-    const onUploadImageButtonClick1 = (0,external_react_.useCallback)(()=>{
-        if (!inputRef1.current) {
-            return;
-        }
+    const onUploadImageButtonClick1 = ()=>{
         inputRef1.current.click();
-    }, []);
+    };
     // -----------------------
     const [file2, setFile2] = (0,external_recoil_.useRecoilState)(atom/* file2Atom */.u9);
     const saveImgFile2 = async ()=>{
@@ -114,12 +111,9 @@ function Frame1(props) {
         }
     };
     const inputRef2 = (0,external_react_.useRef)(null);
-    const onUploadImageButtonClick2 = (0,external_react_.useCallback)(()=>{
-        if (!inputRef2.current) {
-            return;
-        }
+    const onUploadImageButtonClick2 = ()=>{
         inputRef2.current.click();
-    }, []);
+    };
     // -----------------------
     const [file3, setFile3] = (0,external_recoil_.useRecoilState)(atom/* file3Atom */.WQ);
     const saveImgFile3 = async ()=>{
@@ -140,12 +134,9 @@ function Frame1(props) {
         }
     };
     const inputRef3 = (0,external_react_.useRef)(null);
-    const onUploadImageButtonClick3 = (0,external_react_.useCallback)(()=>{
-        if (!inputRef3.current) {
-            return;
-        }
+    const onUploadImageButtonClick3 = ()=>{
         inputRef3.current.click();
-    }, []);
+    };
     // -----------------------
     const [file4, setFile4] = (0,external_recoil_.useRecoilState)(atom/* file4Atom */.$1);
     const saveImgFile4 = async ()=>{
@@ -166,12 +157,9 @@ function Frame1(props) {
         }
     };
     const inputRef4 = (0,external_react_.useRef)(null);
-    const onUploadImageButtonClick4 = (0,external_react_.useCallback)(()=>{
-        if (!inputRef4.current) {
-            return;
-        }
+    const onUploadImageButtonClick4 = ()=>{
         inputRef4.current.click();
-    }, []);
+    };
     // -----------------------
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         children: [

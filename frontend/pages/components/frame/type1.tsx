@@ -57,12 +57,9 @@ export default function Frame1(props: any) {
     }
   };
   const inputRef1 = useRef<any>(null);
-  const onUploadImageButtonClick1 = useCallback(() => {
-    if (!inputRef1.current) {
-      return;
-    }
+  const onUploadImageButtonClick1 = () => {
     inputRef1.current.click();
-  }, []);
+  };
   // -----------------------
   const [file2, setFile2] = useRecoilState<any>(file2Atom);
   const saveImgFile2 = async () => {
@@ -83,12 +80,9 @@ export default function Frame1(props: any) {
     }
   };
   const inputRef2 = useRef<any>(null);
-  const onUploadImageButtonClick2 = useCallback(() => {
-    if (!inputRef2.current) {
-      return;
-    }
+  const onUploadImageButtonClick2 = () => {
     inputRef2.current.click();
-  }, []);
+  };
   // -----------------------
   const [file3, setFile3] = useRecoilState<any>(file3Atom);
   const saveImgFile3 = async () => {
@@ -109,12 +103,9 @@ export default function Frame1(props: any) {
     }
   };
   const inputRef3 = useRef<any>(null);
-  const onUploadImageButtonClick3 = useCallback(() => {
-    if (!inputRef3.current) {
-      return;
-    }
+  const onUploadImageButtonClick3 = () => {
     inputRef3.current.click();
-  }, []);
+  };
   // -----------------------
   const [file4, setFile4] = useRecoilState<any>(file4Atom);
   const saveImgFile4 = async () => {
@@ -135,12 +126,9 @@ export default function Frame1(props: any) {
     }
   };
   const inputRef4 = useRef<any>(null);
-  const onUploadImageButtonClick4 = useCallback(() => {
-    if (!inputRef4.current) {
-      return;
-    }
+  const onUploadImageButtonClick4 = () => {
     inputRef4.current.click();
-  }, []);
+  };
   // -----------------------
 
   return (

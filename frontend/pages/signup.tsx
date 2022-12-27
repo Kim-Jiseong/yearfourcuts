@@ -9,17 +9,16 @@ export default function Signup() {
   const [err, setErr] = useState(false);
   const [input, setInput] = useState<any>();
   const [loading, setLoading] = useState(true);
-  type Session = {
-    accessToken: any | string;
-  };
+  // type Session = {
+  //   accessToken: any | string;
+  //   idToken: any | string;
+  // };
   const { data: session, status } = useSession<any>({ required: false });
-  // console.log("session", session);
 
   const userSignUp = () => {
     console.log("회원가입", session);
-    if (session?.accessToken) {
+    if (session?.idToken) {
       axios
-        // .post("http://localhost:8000/api/accounts/google/callback/", {
         .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/google/callback/", {
           accessToken: session.accessToken,
         })
@@ -39,7 +38,32 @@ export default function Signup() {
         })
         .catch(function (error) {
           console.log("에러발생");
-          signIn("google", { callbackUrl: "/signup" });
+          // signIn("google", { callbackUrl: "/signup" });
+          console.log(error);
+        });
+    } else {
+      axios
+        .post(process.env.NEXT_PUBLIC_BASE_URL + "accounts/kakao/callback/", {
+          accessToken: session?.accessToken,
+          email: session?.user?.email,
+        })
+        .then(function (res) {
+          console.log(res);
+          if (res.data.status === "202 UserAlreadyExist" && res.data.nickname) {
+            router.push(res.data.pid);
+            // console.log(res.data.pid);
+          } else if (
+            res.data.status === "202 UserAlreadyExist" &&
+            !res.data.nickname
+          ) {
+            setLoading(false);
+          } else {
+            setLoading(false);
+          }
+        })
+        .catch(function (error) {
+          console.log("에러발생");
+          // signIn("google", { callbackUrl: "/signup" });
           console.log(error);
         });
     }
@@ -66,7 +90,7 @@ export default function Signup() {
   };
   useEffect(() => {
     if (status === "authenticated") {
-      console.log("유저 생성 시작");
+      // console.log("유저 생성 시작");
       userSignUp();
     }
   }, [status]);
