@@ -1,5 +1,6 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/[pid]": "pages/[pid].html",
   "/[pid]/upload": "pages/[pid]/upload.html",
@@ -16,6 +17,5 @@
   "/": "pages/index.html",
   "/login": "pages/login.html",
   "/signup": "pages/signup.html",
-  "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }

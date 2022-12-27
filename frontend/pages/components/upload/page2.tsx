@@ -15,6 +15,22 @@ import {
 } from "atoms/atom";
 export default function Upload(props: any) {
   const router = useRouter();
+
+  const getColor = () => {
+    axios
+      .get(process.env.NEXT_PUBLIC_BASE_URL + "posts/colorlist")
+      .then((res) => {
+        console.log(res.data.colorlist[0]);
+        setColorList(res.data.colorlist);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getColor();
+  }, []);
+
   const [file1, setFile1] = useRecoilState<any>(file1Atom);
   const [file2, setFile2] = useRecoilState<any>(file2Atom);
   const [file3, setFile3] = useRecoilState<any>(file3Atom);
@@ -31,6 +47,27 @@ export default function Upload(props: any) {
         <div>사진을 올려주세요</div>
       </S.InfoContainer>
       <Frame></Frame>
+      <S.SubTitle>컬러</S.SubTitle>
+      <S.ColorContainer>
+        {colorList &&
+          colorList.map((color: any, idx: number) => (
+            <S.ColorWrapperContainer key={color}>
+              <S.ColorWrapperSel
+                color={color}
+                title={selColor}
+                // onClick={() => {
+                //   setSelColor(color);
+                // }}
+              ></S.ColorWrapperSel>
+              <S.ColorWrapper
+                color={color}
+                onClick={() => {
+                  setSelColor(color);
+                }}
+              ></S.ColorWrapper>
+            </S.ColorWrapperContainer>
+          ))}
+      </S.ColorContainer>
       <S.BtnWrapper>
         <S.Btn
           color="white"

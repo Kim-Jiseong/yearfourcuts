@@ -35,24 +35,9 @@ export default function Upload(props: any) {
   const [frame, setFrame] = useRecoilState<any>(frameAtom);
   // const [frame, setFrame] = useState<any>();
   const [colorList, setColorList] = useState<any>();
-  const [page, setPage] = useRecoilState<any>(pageAtom);
   const [selColor, setSelColor] = useRecoilState<any>(colorAtom);
-  // const [selColor, setSelColor] = useState<any>();
+  const [page, setPage] = useRecoilState<any>(pageAtom);
 
-  const getColor = () => {
-    axios
-      .get(process.env.NEXT_PUBLIC_BASE_URL + "posts/colorlist")
-      .then((res) => {
-        console.log(res.data.colorlist[0]);
-        setColorList(res.data.colorlist);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  useEffect(() => {
-    getColor();
-  }, []);
   return (
     <S.Container>
       <S.InfoContainer>
@@ -89,31 +74,11 @@ export default function Upload(props: any) {
           {/* <F1 id="F3" select={frame}></F1> */}
         </Frame>
       </S.FrameContainer>
-      <S.SubTitle>컬러</S.SubTitle>
-      <S.ColorContainer>
-        {colorList &&
-          colorList.map((color: any, idx: number) => (
-            <S.ColorWrapperContainer key={color}>
-              <S.ColorWrapperSel
-                color={color}
-                title={selColor}
-                // onClick={() => {
-                //   setSelColor(color);
-                // }}
-              ></S.ColorWrapperSel>
-              <S.ColorWrapper
-                color={color}
-                onClick={() => {
-                  setSelColor(color);
-                }}
-              ></S.ColorWrapper>
-            </S.ColorWrapperContainer>
-          ))}
-      </S.ColorContainer>
+
       <S.Btn
         style={{ backgroundColor: "white", width: "100%" }}
         onClick={() => {
-          if (frame && selColor) {
+          if (frame) {
             setPage(2);
           }
         }}

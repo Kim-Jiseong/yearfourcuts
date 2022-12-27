@@ -1,5 +1,6 @@
 import * as S from "styles/main/style";
 import { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -10,17 +11,42 @@ import DetailFrame from "pages/components/frame/detailFrame";
 import intro from "public/img/intro.png";
 import { useRecoilState } from "recoil";
 import { modalAtom } from "atoms/atom";
+
+interface Props {
+  checked?: boolean | undefined;
+}
+const HiddenSpanWrapper = styled.div<Props>`
+  font-size: 1.2rem;
+  right: 0;
+  width: 10rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none;
+  & span {
+    width: 50%;
+    text-align: center;
+  }
+  & span:first-child {
+    color: ${(props) => (props.checked ? "#707070" : "#fff")};
+  }
+  & span:last-child {
+    color: ${(props) => (props.checked ? "#fff" : "#707070")};
+  }
+`;
+
 export default function Home() {
   const router = useRouter();
   const { data: session, status } = useSession<any>({ required: false });
-  const [boardMaster, setBoardMaster] = useState();
+  const [boardMaster, setBoardMaster] = useState<any>();
   const [modal, setModal] = useRecoilState(modalAtom);
   const [hidden, setHidden] = useState<boolean>();
-  const [boardMasternickname, setBoardMasterNickname] = useState();
+  const [boardMasternickname, setBoardMasterNickname] = useState<string>("");
   const [postList, setPostList] = useState<any>([]);
   const [currentUrl, setCurrentUrl] = useState("");
   const blank = "client_assets/blank.png";
-  // console.log(router.query.pid);
   const pid = router.query.pid;
   const getBoardMaster = () => {
     axios
@@ -28,8 +54,6 @@ export default function Home() {
         pid: router.query.pid,
       })
       .then(function (res) {
-        // console.log(res);
-        // console.log("유저", res.data.email);
         setBoardMaster(res.data.email);
         setHidden(res.data.hidden);
         setBoardMasterNickname(res.data.nickname);
@@ -130,9 +154,16 @@ export default function Home() {
         {session?.user?.email === boardMaster && (
           <S.SetHiddenConatainer>
             <S.SetHiddenBtn onClick={changeHiddenState}>
-              <span>내 앨범 공개</span>
-              <input role="switch" type="checkbox" checked={hidden} />
-              <span>비공개</span>
+              <div>내 앨범 </div>
+              <HiddenSpanWrapper checked={hidden}>
+                <span>공개</span> <span>비공개</span>
+              </HiddenSpanWrapper>
+              <input
+                role="switch"
+                type="checkbox"
+                checked={hidden}
+                readOnly
+              ></input>
             </S.SetHiddenBtn>
           </S.SetHiddenConatainer>
         )}

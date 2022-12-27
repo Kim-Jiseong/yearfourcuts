@@ -223,36 +223,47 @@ export const SetHiddenBtn = styled.label`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
-  & span {
-    font-size: 1.4rem;
-  }
+  position: relative;
+
   & input {
     appearance: none;
     position: relative;
-    border: max(2px, 0.1em) solid gray;
-    border-radius: 1.25em;
-    width: 6rem;
-    height: 3.25rem;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    border-radius: 4px;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 1rem;
   }
   & input::before {
     content: "";
     position: absolute;
     left: 0;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    transform: scale(0.8);
-    background-color: gray;
+    width: 5rem;
+    height: 3rem;
+    background-color: #ff7575;
+    border-radius: 4px;
     transition: left 250ms linear;
   }
   & input:checked::before {
-    background-color: white;
-    left: 2.75rem;
+    left: 5rem;
   }
   & input:checked {
-    background-color: #ff7575;
-    border-color: #ff7575;
-    /* border-color: #ff7575; */
+  }
+`;
+export const HiddenSpanWrapper = styled.div`
+  font-size: 1.2rem;
+  /* padding: 1rem; */
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none;
+  & span {
+    width: 50%;
+    text-align: center;
   }
 `;
