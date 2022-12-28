@@ -80,6 +80,8 @@ export default function Upload(props: any) {
         onClick={() => {
           if (frame) {
             setPage(2);
+          } else {
+            alert("프레임을 선택해주세요");
           }
         }}
       >

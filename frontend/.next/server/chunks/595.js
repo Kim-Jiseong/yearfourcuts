@@ -155,6 +155,8 @@ function Upload(props) {
                     if (frame && selColor && file1 && file2 && file3 && file4 && author) {
                         setPage("loading");
                         sendFormData();
+                    } else {
+                        alert("작성자를 적어주세요!");
                     }
                 },
                 children: "사진 올리기"

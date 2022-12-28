@@ -124,6 +124,8 @@ export default function Upload(props: any) {
           if (frame && selColor && file1 && file2 && file3 && file4 && author) {
             setPage("loading");
             sendFormData();
+          } else {
+            alert("작성자를 적어주세요!");
           }
         }}
       >

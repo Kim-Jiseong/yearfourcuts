@@ -48,7 +48,7 @@ var atom = __webpack_require__(7232);
 
 
 const Frame = external_styled_components_default().img.withConfig({
-    componentId: "sc-60fb95f6-0"
+    componentId: "sc-b401283a-0"
 })`
   padding: calc(1rem + 2px);
   height: calc(100% + 2px);
@@ -120,6 +120,8 @@ function Upload(props) {
                 onClick: ()=>{
                     if (frame) {
                         setPage(2);
+                    } else {
+                        alert("프레임을 선택해주세요");
                     }
                 },
                 children: "다음으로"
