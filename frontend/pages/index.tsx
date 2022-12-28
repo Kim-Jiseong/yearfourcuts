@@ -79,9 +79,7 @@ export default function Intro() {
       </S.Content>
 
       <S.FooterContainer>
-        <div>
-          <i className="bi bi-c-circle"></i> 일년네컷
-        </div>
+        <div>일년네컷</div>
         <p>멋사 새벽반</p>
 
         <p>
