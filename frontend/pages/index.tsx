@@ -82,14 +82,15 @@ export default function Intro() {
         <div>
           <i className="bi bi-c-circle"></i> 일년네컷
         </div>
-        <p>팀 새벽반</p>
-        <p>Contact:</p>
-        <div>
+        <p>멋사 새벽반</p>
+
+        <p>
+          Contact:
+          <br />
           <i className="bi bi-envelope"></i> 4cuts4memories@gmail.com
-        </div>
-        <div>
+          <br />
           <i className="bi bi-instagram"></i> 4cuts4memories
-        </div>
+        </p>
         <p>
           서비스 관련 기능 이상, 분쟁 및 광고 등 문의 사항은 상기된 이메일로
           연락주시기 바랍니다

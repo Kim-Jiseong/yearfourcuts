@@ -69,14 +69,14 @@ export const FooterContainer = styled.div`
   padding: 3rem 2rem 6rem 2rem;
   color: #1b1b1b;
   & div:first-child {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 700;
   }
   & div {
     margin-top: 0.4rem;
   }
   & p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     line-height: 150%;
     /* font-weight: 700; */
     margin-top: 1rem;
