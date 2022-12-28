@@ -42,40 +42,59 @@ export default function Intro() {
   // console.log(process.env.NEXT_PUBLIC_BASE_URL);
   return (
     <S.Container>
-      <S.ImageContainer>
-        <img src={intro.src}></img>
-      </S.ImageContainer>
+      <S.Content>
+        <S.ImageContainer>
+          <img src={intro.src}></img>
+        </S.ImageContainer>
 
-      <S.ContentContainer>
-        <S.Title>일년네컷</S.Title>
-        <S.SubTitle>너랑 나랑 사진으로 남긴 올해의 추억</S.SubTitle>
+        <S.ContentContainer>
+          <S.Title>일년네컷</S.Title>
+          <S.SubTitle>너랑 나랑 사진으로 남긴 올해의 추억</S.SubTitle>
 
-        {status === "authenticated" && (
-          <div style={{ width: "100%" }}>
-            <S.Btn
-              onClick={() => {
-                router.push("signup");
-              }}
-            >
-              내 앨범 들어가기
-            </S.Btn>
-            <S.Btn onClick={() => signOut()}>로그아웃</S.Btn>
-          </div>
-        )}
-        {status !== "authenticated" && (
-          <div style={{ width: "100%" }}>
-            <S.Btn onClick={onClickGoogle}>구글로 시작하기</S.Btn>
-            <S.Btn onClick={onClickKakao}>카카오로 시작하기</S.Btn>
-          </div>
+          {status === "authenticated" && (
+            <div style={{ width: "100%" }}>
+              <S.Btn
+                onClick={() => {
+                  router.push("signup");
+                }}
+              >
+                내 앨범 들어가기
+              </S.Btn>
+              <S.Btn onClick={() => signOut()}>로그아웃</S.Btn>
+            </div>
+          )}
+          {status !== "authenticated" && (
+            <div style={{ width: "100%" }}>
+              <S.Btn onClick={onClickGoogle}>구글로 시작하기</S.Btn>
+              <S.Btn onClick={onClickKakao}>카카오로 시작하기</S.Btn>
+            </div>
+          )}
 
-          // <S.Btn onClick={onClickCreate}>내 앨범 만들기</S.Btn>
-        )}
-        {/* {browserType} */}
-        {/* {session && <div>{session?.user?.email}</div>} */}
-        {/* {isKakaoBrower && <div>카카오임</div>}
+          {/* {browserType} */}
+          {/* {session && <div>{session?.user?.email}</div>} */}
+          {/* {isKakaoBrower && <div>카카오임</div>}
         {!isKakaoBrower && <div>카카오 아님</div>} */}
-        {/* {session && <div>{session?.user?.email}</div>} */}
-      </S.ContentContainer>
+          {/* {session && <div>{session?.user?.email}</div>} */}
+        </S.ContentContainer>
+      </S.Content>
+
+      <S.FooterContainer>
+        <div>
+          <i className="bi bi-c-circle"></i> 일년네컷
+        </div>
+        <p>팀 새벽반</p>
+        <p>Contact:</p>
+        <div>
+          <i className="bi bi-envelope"></i> 4cuts4memories@gmail.com
+        </div>
+        <div>
+          <i className="bi bi-instagram"></i> 4cuts4memories
+        </div>
+        <p>
+          서비스 관련 기능 이상, 분쟁 및 광고 등 문의 사항은 상기된 이메일로
+          연락주시기 바랍니다
+        </p>
+      </S.FooterContainer>
     </S.Container>
   );
 }

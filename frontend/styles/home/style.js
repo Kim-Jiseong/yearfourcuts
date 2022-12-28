@@ -2,6 +2,11 @@ import styled from "styled-components";
 // import { colors } from 'styles/theme'
 
 export const Container = styled.div`
+  width: 100%;
+  min-height: 100vh;
+`;
+
+export const Content = styled.div`
   width: 90%;
   min-height: 100vh;
   margin: 0 auto;
@@ -53,4 +58,27 @@ export const Btn = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
+`;
+
+export const FooterContainer = styled.div`
+  width: 100%;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  background-color: #faeab1;
+  padding: 3rem 2rem 6rem 2rem;
+  color: #1b1b1b;
+  & div:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  & div {
+    margin-top: 0.4rem;
+  }
+  & p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    /* font-weight: 700; */
+    margin-top: 1rem;
+  }
 `;

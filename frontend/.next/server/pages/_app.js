@@ -5,7 +5,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 9481:
+/***/ 4221:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -152,6 +152,28 @@ const GlobalStyle = ({ children  })=>{
 var react_ = __webpack_require__(1649);
 // EXTERNAL MODULE: external "recoil"
 var external_recoil_ = __webpack_require__(9755);
+// EXTERNAL MODULE: ./node_modules/next/script.js
+var script = __webpack_require__(4298);
+var script_default = /*#__PURE__*/__webpack_require__.n(script);
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(1853);
+;// CONCATENATED MODULE: ./libs/gtag.js
+const GA_TRACKING_ID = "G-3TLR26T6DE"; // 측정ID 설정: .env 파일로 관리해도된다.
+// https://developers.google.com/analytics/devguides/collection/gtagjs/pages
+const pageview = (url)=>{
+    window.gtag("config", GA_TRACKING_ID, {
+        page_path: url
+    });
+};
+// https://developers.google.com/analytics/devguides/collection/gtagjs/events
+const gtag_event = ({ action , category , label , value  })=>{
+    window.gtag("event", action, {
+        event_category: category,
+        event_label: label,
+        value: value
+    });
+};
+
 ;// CONCATENATED MODULE: external "next/head"
 const head_namespaceObject = require("next/head");
 var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
@@ -161,8 +183,28 @@ var head_default = /*#__PURE__*/__webpack_require__.n(head_namespaceObject);
 
 
 
+
+
+
+
 // export default function App({ Component, pageProps, session }: AppProps) {
 function App({ Component , pageProps  }) {
+    // GA 설정 시작
+    const router = (0,router_.useRouter)();
+    (0,external_react_.useEffect)(()=>{
+        const handleRouteChange = (url)=>{
+            pageview(url);
+        };
+        router.events.on("routeChangeComplete", handleRouteChange);
+        router.events.on("hashChangeComplete", handleRouteChange);
+        return ()=>{
+            router.events.off("routeChangeComplete", handleRouteChange);
+            router.events.off("hashChangeComplete", handleRouteChange);
+        };
+    }, [
+        router.events
+    ]);
+    // GA 설정 끝
     return /*#__PURE__*/ jsx_runtime_.jsx(react_.SessionProvider, {
         session: pageProps.session,
         children: /*#__PURE__*/ jsx_runtime_.jsx(external_recoil_.RecoilRoot, {
@@ -172,6 +214,24 @@ function App({ Component , pageProps  }) {
                         children: /*#__PURE__*/ jsx_runtime_.jsx("title", {
                             children: "일년네컷"
                         })
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
+                        strategy: "afterInteractive",
+                        src: `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx((script_default()), {
+                        id: "gtag-init",
+                        strategy: "afterInteractive",
+                        dangerouslySetInnerHTML: {
+                            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_TRACKING_ID}', {
+          page_path: window.location.pathname,
+        });
+      `
+                        }
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx(Component, {
                         ...pageProps
@@ -192,10 +252,31 @@ module.exports = require("next-auth/react");
 
 /***/ }),
 
+/***/ 2796:
+/***/ ((module) => {
+
+module.exports = require("next/dist/shared/lib/head-manager-context.js");
+
+/***/ }),
+
+/***/ 1853:
+/***/ ((module) => {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ 6405:
+/***/ ((module) => {
+
+module.exports = require("react-dom");
 
 /***/ }),
 
@@ -227,7 +308,7 @@ module.exports = require("styled-components");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(9481));
+var __webpack_exports__ = __webpack_require__.X(0, [210,298], () => (__webpack_exec__(4221)));
 module.exports = __webpack_exports__;
 
 })();

@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[416],{1073:function(n,_,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/components/frame/detailFrame",function(){return e(5715)}])}},function(n){n.O(0,[876,934,715,774,888,179],function(){return n(n.s=1073)}),_N_E=n.O()}]);
