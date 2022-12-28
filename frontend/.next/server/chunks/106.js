@@ -169,10 +169,10 @@ function Frame1(props) {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(style/* PhotoContainer */.RM, {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick1,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file1 ? file1 : upload.src
+                                        src: file1 ? file1 : upload.src,
+                                        onClick: onUploadImageButtonClick1
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef1,
@@ -183,10 +183,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick2,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file2 ? file2 : upload.src
+                                        src: file2 ? file2 : upload.src,
+                                        onClick: onUploadImageButtonClick2
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef2,
@@ -197,10 +197,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick3,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file3 ? file3 : upload.src
+                                        src: file3 ? file3 : upload.src,
+                                        onClick: onUploadImageButtonClick3
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef3,
@@ -211,10 +211,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick4,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file4 ? file4 : upload.src
+                                        src: file4 ? file4 : upload.src,
+                                        onClick: onUploadImageButtonClick4
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef4,
@@ -258,10 +258,10 @@ function Frame1(props) {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoContainer */.RM, {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick1,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file1 ? file1 : upload2.src
+                                        src: file1 ? file1 : upload2.src,
+                                        onClick: onUploadImageButtonClick1
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef1,
@@ -272,10 +272,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick2,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file2 ? file2 : upload2.src
+                                        src: file2 ? file2 : upload2.src,
+                                        onClick: onUploadImageButtonClick2
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef2,
@@ -290,10 +290,10 @@ function Frame1(props) {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoContainer2 */.Ic, {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick3,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file3 ? file3 : upload2.src
+                                        src: file3 ? file3 : upload2.src,
+                                        onClick: onUploadImageButtonClick3
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef3,
@@ -304,10 +304,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame2_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick4,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file4 ? file4 : upload2.src
+                                        src: file4 ? file4 : upload2.src,
+                                        onClick: onUploadImageButtonClick4
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef4,
@@ -327,10 +327,10 @@ function Frame1(props) {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoContainer */.RM, {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick1,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file1 ? file1 : upload2.src
+                                        src: file1 ? file1 : upload2.src,
+                                        onClick: onUploadImageButtonClick1
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef1,
@@ -341,10 +341,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick2,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file2 ? file2 : upload2.src
+                                        src: file2 ? file2 : upload2.src,
+                                        onClick: onUploadImageButtonClick2
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef2,
@@ -359,10 +359,10 @@ function Frame1(props) {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoContainer2 */.Ic, {
                         children: [
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick3,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file3 ? file3 : upload2.src
+                                        src: file3 ? file3 : upload2.src,
+                                        onClick: onUploadImageButtonClick3
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef3,
@@ -373,10 +373,10 @@ function Frame1(props) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,jsx_runtime_.jsxs)(frame3_style/* PhotoWrapper */.YT, {
-                                onClick: onUploadImageButtonClick4,
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
-                                        src: file4 ? file4 : upload2.src
+                                        src: file4 ? file4 : upload2.src,
+                                        onClick: onUploadImageButtonClick1
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef4,

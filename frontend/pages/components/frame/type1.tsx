@@ -136,8 +136,11 @@ export default function Frame1(props: any) {
       {frame === 1 && (
         <S.Container color={Bg}>
           <S.PhotoContainer>
-            <S.PhotoWrapper onClick={onUploadImageButtonClick1}>
-              <img src={file1 ? file1 : DefaultImg.src}></img>
+            <S.PhotoWrapper>
+              <img
+                src={file1 ? file1 : DefaultImg.src}
+                onClick={onUploadImageButtonClick1}
+              ></img>
               <input
                 ref={inputRef1}
                 accept="image/*"
@@ -145,8 +148,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile1}
               ></input>
             </S.PhotoWrapper>
-            <S.PhotoWrapper onClick={onUploadImageButtonClick2}>
-              <img src={file2 ? file2 : DefaultImg.src}></img>
+            <S.PhotoWrapper>
+              <img
+                src={file2 ? file2 : DefaultImg.src}
+                onClick={onUploadImageButtonClick2}
+              ></img>
               <input
                 ref={inputRef2}
                 accept="image/*"
@@ -154,8 +160,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile2}
               ></input>
             </S.PhotoWrapper>
-            <S.PhotoWrapper onClick={onUploadImageButtonClick3}>
-              <img src={file3 ? file3 : DefaultImg.src}></img>
+            <S.PhotoWrapper>
+              <img
+                src={file3 ? file3 : DefaultImg.src}
+                onClick={onUploadImageButtonClick3}
+              ></img>
               <input
                 ref={inputRef3}
                 accept="image/*"
@@ -163,8 +172,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile3}
               ></input>
             </S.PhotoWrapper>
-            <S.PhotoWrapper onClick={onUploadImageButtonClick4}>
-              <img src={file4 ? file4 : DefaultImg.src}></img>
+            <S.PhotoWrapper>
+              <img
+                src={file4 ? file4 : DefaultImg.src}
+                onClick={onUploadImageButtonClick4}
+              ></img>
               <input
                 ref={inputRef4}
                 accept="image/*"
@@ -193,8 +205,11 @@ export default function Frame1(props: any) {
       {frame === 2 && (
         <T.Container color={Bg}>
           <T.PhotoContainer>
-            <T.PhotoWrapper onClick={onUploadImageButtonClick1}>
-              <img src={file1 ? file1 : DefaultImg2.src}></img>
+            <T.PhotoWrapper>
+              <img
+                src={file1 ? file1 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick1}
+              ></img>
               <input
                 ref={inputRef1}
                 accept="image/*"
@@ -202,8 +217,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile1}
               ></input>
             </T.PhotoWrapper>
-            <T.PhotoWrapper onClick={onUploadImageButtonClick2}>
-              <img src={file2 ? file2 : DefaultImg2.src}></img>
+            <T.PhotoWrapper>
+              <img
+                src={file2 ? file2 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick2}
+              ></img>
               <input
                 ref={inputRef2}
                 accept="image/*"
@@ -213,8 +231,11 @@ export default function Frame1(props: any) {
             </T.PhotoWrapper>
           </T.PhotoContainer>
           <T.PhotoContainer2>
-            <T.PhotoWrapper onClick={onUploadImageButtonClick3}>
-              <img src={file3 ? file3 : DefaultImg2.src}></img>
+            <T.PhotoWrapper>
+              <img
+                src={file3 ? file3 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick3}
+              ></img>
               <input
                 ref={inputRef3}
                 accept="image/*"
@@ -222,8 +243,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile3}
               ></input>
             </T.PhotoWrapper>
-            <T.PhotoWrapper onClick={onUploadImageButtonClick4}>
-              <img src={file4 ? file4 : DefaultImg2.src}></img>
+            <T.PhotoWrapper>
+              <img
+                src={file4 ? file4 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick4}
+              ></img>
               <input
                 ref={inputRef4}
                 accept="image/*"
@@ -237,8 +261,11 @@ export default function Frame1(props: any) {
       {frame === 3 && (
         <M.Container color={Bg}>
           <M.PhotoContainer>
-            <M.PhotoWrapper onClick={onUploadImageButtonClick1}>
-              <img src={file1 ? file1 : DefaultImg2.src}></img>
+            <M.PhotoWrapper>
+              <img
+                src={file1 ? file1 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick1}
+              ></img>
               <input
                 ref={inputRef1}
                 accept="image/*"
@@ -246,8 +273,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile1}
               ></input>
             </M.PhotoWrapper>
-            <M.PhotoWrapper onClick={onUploadImageButtonClick2}>
-              <img src={file2 ? file2 : DefaultImg2.src}></img>
+            <M.PhotoWrapper>
+              <img
+                src={file2 ? file2 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick2}
+              ></img>
               <input
                 ref={inputRef2}
                 accept="image/*"
@@ -257,8 +287,11 @@ export default function Frame1(props: any) {
             </M.PhotoWrapper>
           </M.PhotoContainer>
           <M.PhotoContainer2>
-            <M.PhotoWrapper onClick={onUploadImageButtonClick3}>
-              <img src={file3 ? file3 : DefaultImg2.src}></img>
+            <M.PhotoWrapper>
+              <img
+                src={file3 ? file3 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick3}
+              ></img>
               <input
                 ref={inputRef3}
                 accept="image/*"
@@ -266,8 +299,11 @@ export default function Frame1(props: any) {
                 onChange={saveImgFile3}
               ></input>
             </M.PhotoWrapper>
-            <M.PhotoWrapper onClick={onUploadImageButtonClick4}>
-              <img src={file4 ? file4 : DefaultImg2.src}></img>
+            <M.PhotoWrapper>
+              <img
+                src={file4 ? file4 : DefaultImg2.src}
+                onClick={onUploadImageButtonClick1}
+              ></img>
               <input
                 ref={inputRef4}
                 accept="image/*"
