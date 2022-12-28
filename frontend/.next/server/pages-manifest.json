@@ -1,8 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/[pid]": "pages/[pid].html",
   "/[pid]/upload": "pages/[pid]/upload.html",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
   "/api/hello": "pages/api/hello.js",
   "/components/frame/detailFrame": "pages/components/frame/detailFrame.html",
   "/components/frame/showFrame": "pages/components/frame/showFrame.html",
@@ -14,8 +16,6 @@
   "/components/upload/page3": "pages/components/upload/page3.html",
   "/": "pages/index.html",
   "/login": "pages/login.html",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/_error": "pages/_error.js",
   "/signup": "pages/signup.html",
   "/404": "pages/404.html"
 }

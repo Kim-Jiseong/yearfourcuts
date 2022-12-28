@@ -81,7 +81,7 @@ export default function Upload(props: any) {
           if (frame) {
             setPage(2);
           } else {
-            alert("프레임을 선택해주세요");
+            alert("프레임을 선택해주세요!");
           }
         }}
       >

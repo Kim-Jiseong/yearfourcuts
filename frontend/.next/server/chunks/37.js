@@ -105,7 +105,7 @@ function Upload(props) {
                             if (frame && selColor && file1 && file2 && file3 && file4) {
                                 setPage(3);
                             } else {
-                                alert("사진을 전부 채워주세요");
+                                alert("네컷을 모두 채워주세요!");
                             }
                         },
                         children: "다음으로"
