@@ -376,7 +376,7 @@ function Frame1(props) {
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                         src: file4 ? file4 : upload2.src,
-                                        onClick: onUploadImageButtonClick1
+                                        onClick: onUploadImageButtonClick4
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("input", {
                                         ref: inputRef4,

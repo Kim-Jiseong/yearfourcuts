@@ -302,7 +302,7 @@ export default function Frame1(props: any) {
             <M.PhotoWrapper>
               <img
                 src={file4 ? file4 : DefaultImg2.src}
-                onClick={onUploadImageButtonClick1}
+                onClick={onUploadImageButtonClick4}
               ></img>
               <input
                 ref={inputRef4}
