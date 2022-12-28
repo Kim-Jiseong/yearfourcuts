@@ -59,7 +59,7 @@ function DetailFrame(props) {
     const [author, setAuthor] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.author);
     const [pk, setPk] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.id);
     const deletePost = ()=>{
-        axios__WEBPACK_IMPORTED_MODULE_10__["default"].post("http://localhost:8000/backend/" + "posts/deletePost", {
+        axios__WEBPACK_IMPORTED_MODULE_10__["default"].post("https://www.4cuts4memories.com/backend/" + "posts/deletePost", {
             post_pk: pk
         }).then(function(res) {
             console.log(res);

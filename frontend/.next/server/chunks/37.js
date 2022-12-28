@@ -36,7 +36,7 @@ axios__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (awa
 function Upload(props) {
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     const getColor = ()=>{
-        axios__WEBPACK_IMPORTED_MODULE_4__["default"].get("http://localhost:8000/backend/" + "posts/colorlist").then((res)=>{
+        axios__WEBPACK_IMPORTED_MODULE_4__["default"].get("https://www.4cuts4memories.com/backend/" + "posts/colorlist").then((res)=>{
             console.log(res.data.colorlist[0]);
             setColorList(res.data.colorlist);
         }).catch((err)=>{
