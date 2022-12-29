@@ -39,7 +39,13 @@ export default function DetailFrame(props: any) {
     console.log("onCapture");
     html2canvas(imgContainer.current, {
       allowTaint: true,
+      useCORS: false,
+      // foreignObjectRendering: true,
     }).then((canvas) => {
+      console.log(
+        "canvas",
+        canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
+      );
       onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
     });
     // const onCapture = () => {};
@@ -77,31 +83,55 @@ export default function DetailFrame(props: any) {
           <S.Container ref={imgContainer} color={Bg}>
             <S.PhotoContainer>
               <S.PhotoWrapper>
-                <img src={file1 ? file1 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file1 ? file1 : Blank.src}
+                ></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img src={file2 ? file2 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file2 ? file2 : Blank.src}
+                ></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img src={file3 ? file3 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file3 ? file3 : Blank.src}
+                ></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img src={file4 ? file4 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file4 ? file4 : Blank.src}
+                ></img>
               </S.PhotoWrapper>
             </S.PhotoContainer>
 
             <S.PhotoContainer2>
               <S.PhotoWrapperGrey>
-                <img src={file1 ? file1 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file1 ? file1 : Blank.src}
+                ></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img src={file2 ? file2 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file2 ? file2 : Blank.src}
+                ></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img src={file3 ? file3 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file3 ? file3 : Blank.src}
+                ></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img src={file4 ? file4 : Blank.src}></img>
+                <img
+                  crossOrigin="anonymous"
+                  src={file4 ? file4 : Blank.src}
+                ></img>
               </S.PhotoWrapperGrey>
             </S.PhotoContainer2>
             {master === session?.user?.email && (
