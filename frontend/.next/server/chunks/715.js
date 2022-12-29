@@ -66,10 +66,10 @@ function DetailFrame(props) {
         console.log("onCapture");
         html2canvas__WEBPACK_IMPORTED_MODULE_9___default()(imgContainer.current, {
             allowTaint: true,
-            useCORS: false
+            useCORS: true
         }).then((canvas)=>{
-            console.log("canvas", canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-            onSaveAs(canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"), "4cuts4memories.png");
+            console.log("canvas", canvas);
+            onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
         });
         // const onCapture = () => {};
         const onSaveAs = (uri, filename)=>{

@@ -39,19 +39,11 @@ export default function DetailFrame(props: any) {
     console.log("onCapture");
     html2canvas(imgContainer.current, {
       allowTaint: true,
-      useCORS: false,
+      useCORS: true,
       // foreignObjectRendering: true,
     }).then((canvas) => {
-      console.log(
-        "canvas",
-        canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
-      );
-      onSaveAs(
-        canvas
-          .toDataURL("image/png")
-          .replace("image/png", "image/octet-stream"),
-        "4cuts4memories.png"
-      );
+      console.log("canvas", canvas);
+      onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
     });
     // const onCapture = () => {};
 
