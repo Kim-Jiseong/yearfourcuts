@@ -121,7 +121,7 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
-                <S.MailIcon
+                {/* <S.MailIcon
                   onClick={() => {
                     const result = confirm("이 사진을 다운로드하시겠습니까?");
                     if (result === true) {
@@ -132,7 +132,7 @@ export default function DetailFrame(props: any) {
                   }}
                 >
                   <i className="bi bi-download"></i>
-                </S.MailIcon>
+                </S.MailIcon> */}
 
                 <S.MailIcon
                   onClick={() => {
@@ -189,7 +189,7 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
-                <S.MailIcon
+                {/* <S.MailIcon
                   onClick={() => {
                     const result = confirm("이 사진을 다운로드하시겠습니까?");
                     if (result === true) {
@@ -200,7 +200,7 @@ export default function DetailFrame(props: any) {
                   }}
                 >
                   <i className="bi bi-download"></i>
-                </S.MailIcon>
+                </S.MailIcon> */}
                 <S.MailIcon
                   onClick={() => {
                     setModal(true);
@@ -256,7 +256,7 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
-                <S.MailIcon
+                {/* <S.MailIcon
                   onClick={() => {
                     const result = confirm("이 사진을 다운로드하시겠습니까?");
                     if (result === true) {
@@ -267,7 +267,7 @@ export default function DetailFrame(props: any) {
                   }}
                 >
                   <i className="bi bi-download"></i>
-                </S.MailIcon>
+                </S.MailIcon> */}
                 <S.MailIcon
                   onClick={() => {
                     setModal(true);

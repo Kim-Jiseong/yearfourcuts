@@ -166,19 +166,6 @@ function DetailFrame(props) {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
                                     onClick: ()=>{
-                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
-                                        if (result === true) {
-                                            onHtmlToPng();
-                                        } else {
-                                            return;
-                                        }
-                                    },
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
-                                        className: "bi bi-download"
-                                    })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
-                                    onClick: ()=>{
                                         setModal(true);
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
@@ -253,19 +240,6 @@ function DetailFrame(props) {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
                                     onClick: ()=>{
-                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
-                                        if (result === true) {
-                                            onHtmlToPng();
-                                        } else {
-                                            return;
-                                        }
-                                    },
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
-                                        className: "bi bi-download"
-                                    })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
-                                    onClick: ()=>{
                                         setModal(true);
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
@@ -336,19 +310,6 @@ function DetailFrame(props) {
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                                         className: "bi bi-trash"
-                                    })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
-                                    onClick: ()=>{
-                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
-                                        if (result === true) {
-                                            onHtmlToPng();
-                                        } else {
-                                            return;
-                                        }
-                                    },
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
-                                        className: "bi bi-download"
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
