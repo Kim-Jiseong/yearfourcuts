@@ -25,10 +25,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var next_auth_react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1649);
 /* harmony import */ var next_auth_react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_auth_react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var atoms_atom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7232);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9648);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_10__]);
-axios__WEBPACK_IMPORTED_MODULE_10__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(7276);
+/* harmony import */ var html2canvas__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(html2canvas__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var atoms_atom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7232);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(9648);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_11__]);
+axios__WEBPACK_IMPORTED_MODULE_11__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -47,7 +50,7 @@ function DetailFrame(props) {
         required: false
     });
     const [modal, setModal] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
-    const [masterModal, setMasterModal] = (0,recoil__WEBPACK_IMPORTED_MODULE_7__.useRecoilState)(atoms_atom__WEBPACK_IMPORTED_MODULE_9__/* .modalAtom */ .hP);
+    const [masterModal, setMasterModal] = (0,recoil__WEBPACK_IMPORTED_MODULE_7__.useRecoilState)(atoms_atom__WEBPACK_IMPORTED_MODULE_10__/* .modalAtom */ .hP);
     const [master, setMaster] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.master);
     const [Bg, setBg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.color);
     const [frame, setFrame] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.frame);
@@ -58,8 +61,27 @@ function DetailFrame(props) {
     const [letter, setLetter] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.letter);
     const [author, setAuthor] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.author);
     const [pk, setPk] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(props.id);
+    const imgContainer = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);
+    const onHtmlToPng = ()=>{
+        console.log("onCapture");
+        html2canvas__WEBPACK_IMPORTED_MODULE_9___default()(imgContainer.current, {
+            allowTaint: true
+        }).then((canvas)=>{
+            onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
+        });
+        // const onCapture = () => {};
+        const onSaveAs = (uri, filename)=>{
+            console.log("onSaveAs");
+            var link = document.createElement("a");
+            document.body.appendChild(link);
+            link.href = uri;
+            link.download = filename;
+            link.click();
+            document.body.removeChild(link);
+        };
+    };
     const deletePost = ()=>{
-        axios__WEBPACK_IMPORTED_MODULE_10__["default"].post("https://www.4cuts4memories.com/backend/" + "posts/deletePost", {
+        axios__WEBPACK_IMPORTED_MODULE_11__["default"].post("https://www.4cuts4memories.com/backend/" + "posts/deletePost", {
             post_pk: pk
         }).then(function(res) {
             console.log(res);
@@ -74,6 +96,7 @@ function DetailFrame(props) {
         children: [
             frame === 1 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .Container */ .W2, {
+                    ref: imgContainer,
                     color: Bg,
                     children: [
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoContainer */ .RM, {
@@ -141,6 +164,19 @@ function DetailFrame(props) {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
                                     onClick: ()=>{
+                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
+                                        if (result === true) {
+                                            onHtmlToPng();
+                                        } else {
+                                            return;
+                                        }
+                                    },
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
+                                        className: "bi bi-download"
+                                    })
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
+                                    onClick: ()=>{
                                         setModal(true);
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
@@ -167,6 +203,7 @@ function DetailFrame(props) {
             }),
             frame === 2 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame2_style__WEBPACK_IMPORTED_MODULE_3__/* .Container */ .W2, {
+                    ref: imgContainer,
                     color: Bg,
                     children: [
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame2_style__WEBPACK_IMPORTED_MODULE_3__/* .PhotoContainer */ .RM, {
@@ -214,6 +251,19 @@ function DetailFrame(props) {
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
                                     onClick: ()=>{
+                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
+                                        if (result === true) {
+                                            onHtmlToPng();
+                                        } else {
+                                            return;
+                                        }
+                                    },
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
+                                        className: "bi bi-download"
+                                    })
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
+                                    onClick: ()=>{
                                         setModal(true);
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
@@ -240,6 +290,7 @@ function DetailFrame(props) {
             }),
             frame === 3 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame3_style__WEBPACK_IMPORTED_MODULE_4__/* .Container */ .W2, {
+                    ref: imgContainer,
                     color: Bg,
                     children: [
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(styles_components_frame3_style__WEBPACK_IMPORTED_MODULE_4__/* .PhotoContainer */ .RM, {
@@ -283,6 +334,19 @@ function DetailFrame(props) {
                                     },
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                                         className: "bi bi-trash"
+                                    })
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {
+                                    onClick: ()=>{
+                                        const result = confirm("이 사진을 다운로드하시겠습니까?");
+                                        if (result === true) {
+                                            onHtmlToPng();
+                                        } else {
+                                            return;
+                                        }
+                                    },
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
+                                        className: "bi bi-download"
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .MailIcon */ .bV, {

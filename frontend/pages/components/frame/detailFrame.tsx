@@ -6,6 +6,8 @@ import Router, { useRouter } from "next/router";
 import Blank from "public/img/blank.png";
 import { useRecoilState } from "recoil";
 import { useSession } from "next-auth/react";
+import html2canvas from "html2canvas";
+
 import { frameAtom, colorAtom, pageAtom, modalAtom } from "atoms/atom";
 import axios from "axios";
 export default function DetailFrame(props: any) {
@@ -32,6 +34,27 @@ export default function DetailFrame(props: any) {
   const [letter, setLetter] = useState<any>(props.letter);
   const [author, setAuthor] = useState<any>(props.author);
   const [pk, setPk] = useState<any>(props.id);
+  const imgContainer = useRef<any>(null);
+  const onHtmlToPng = () => {
+    console.log("onCapture");
+    html2canvas(imgContainer.current, {
+      allowTaint: true,
+    }).then((canvas) => {
+      onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
+    });
+    // const onCapture = () => {};
+
+    const onSaveAs = (uri: string, filename: any) => {
+      console.log("onSaveAs");
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.href = uri;
+      link.download = filename;
+      link.click();
+      document.body.removeChild(link);
+    };
+  };
+
   const deletePost = () => {
     axios
       .post(process.env.NEXT_PUBLIC_BASE_URL + "posts/deletePost", {
@@ -51,7 +74,7 @@ export default function DetailFrame(props: any) {
     <div>
       {frame === 1 && (
         <div>
-          <S.Container color={Bg}>
+          <S.Container ref={imgContainer} color={Bg}>
             <S.PhotoContainer>
               <S.PhotoWrapper>
                 <img src={file1 ? file1 : Blank.src}></img>
@@ -95,6 +118,18 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
+                <S.MailIcon
+                  onClick={() => {
+                    const result = confirm("이 사진을 다운로드하시겠습니까?");
+                    if (result === true) {
+                      onHtmlToPng();
+                    } else {
+                      return;
+                    }
+                  }}
+                >
+                  <i className="bi bi-download"></i>
+                </S.MailIcon>
 
                 <S.MailIcon
                   onClick={() => {
@@ -120,7 +155,7 @@ export default function DetailFrame(props: any) {
       )}
       {frame === 2 && (
         <div>
-          <T.Container color={Bg}>
+          <T.Container ref={imgContainer} color={Bg}>
             <T.PhotoContainer>
               <T.PhotoWrapper>
                 <img src={file1 ? file1 : Blank.src}></img>
@@ -151,7 +186,18 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
-
+                <S.MailIcon
+                  onClick={() => {
+                    const result = confirm("이 사진을 다운로드하시겠습니까?");
+                    if (result === true) {
+                      onHtmlToPng();
+                    } else {
+                      return;
+                    }
+                  }}
+                >
+                  <i className="bi bi-download"></i>
+                </S.MailIcon>
                 <S.MailIcon
                   onClick={() => {
                     setModal(true);
@@ -176,7 +222,7 @@ export default function DetailFrame(props: any) {
       )}
       {frame === 3 && (
         <div>
-          <M.Container color={Bg}>
+          <M.Container ref={imgContainer} color={Bg}>
             <M.PhotoContainer>
               <M.PhotoWrapper>
                 <img src={file1 ? file1 : Blank.src}></img>
@@ -207,7 +253,18 @@ export default function DetailFrame(props: any) {
                 >
                   <i className="bi bi-trash"></i>
                 </S.MailIcon>
-
+                <S.MailIcon
+                  onClick={() => {
+                    const result = confirm("이 사진을 다운로드하시겠습니까?");
+                    if (result === true) {
+                      onHtmlToPng();
+                    } else {
+                      return;
+                    }
+                  }}
+                >
+                  <i className="bi bi-download"></i>
+                </S.MailIcon>
                 <S.MailIcon
                   onClick={() => {
                     setModal(true);
