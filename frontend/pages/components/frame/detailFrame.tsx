@@ -80,55 +80,31 @@ export default function DetailFrame(props: any) {
           <S.Container ref={imgContainer} color={Bg}>
             <S.PhotoContainer>
               <S.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file1 ? file1 : Blank.src}
-                ></img>
+                <img src={file1 ? file1 : Blank.src}></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file2 ? file2 : Blank.src}
-                ></img>
+                <img src={file2 ? file2 : Blank.src}></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file3 ? file3 : Blank.src}
-                ></img>
+                <img src={file3 ? file3 : Blank.src}></img>
               </S.PhotoWrapper>
               <S.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file4 ? file4 : Blank.src}
-                ></img>
+                <img src={file4 ? file4 : Blank.src}></img>
               </S.PhotoWrapper>
             </S.PhotoContainer>
 
             <S.PhotoContainer2>
               <S.PhotoWrapperGrey>
-                <img
-                  crossOrigin="anonymous"
-                  src={file1 ? file1 : Blank.src}
-                ></img>
+                <img src={file1 ? file1 : Blank.src}></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img
-                  crossOrigin="anonymous"
-                  src={file2 ? file2 : Blank.src}
-                ></img>
+                <img src={file2 ? file2 : Blank.src}></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img
-                  crossOrigin="anonymous"
-                  src={file3 ? file3 : Blank.src}
-                ></img>
+                <img src={file3 ? file3 : Blank.src}></img>
               </S.PhotoWrapperGrey>
               <S.PhotoWrapperGrey>
-                <img
-                  crossOrigin="anonymous"
-                  src={file4 ? file4 : Blank.src}
-                ></img>
+                <img src={file4 ? file4 : Blank.src}></img>
               </S.PhotoWrapperGrey>
             </S.PhotoContainer2>
             {master === session?.user?.email && (
@@ -185,30 +161,18 @@ export default function DetailFrame(props: any) {
           <T.Container ref={imgContainer} color={Bg}>
             <T.PhotoContainer>
               <T.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file1 ? file1 : Blank.src}
-                ></img>
+                <img src={file1 ? file1 : Blank.src}></img>
               </T.PhotoWrapper>
               <T.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file2 ? file2 : Blank.src}
-                ></img>
+                <img src={file2 ? file2 : Blank.src}></img>
               </T.PhotoWrapper>
             </T.PhotoContainer>
             <T.PhotoContainer2>
               <T.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file3 ? file3 : Blank.src}
-                ></img>
+                <img src={file3 ? file3 : Blank.src}></img>
               </T.PhotoWrapper>
               <T.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file4 ? file4 : Blank.src}
-                ></img>
+                <img src={file4 ? file4 : Blank.src}></img>
               </T.PhotoWrapper>
             </T.PhotoContainer2>
             {master === session?.user?.email && (
@@ -264,30 +228,18 @@ export default function DetailFrame(props: any) {
           <M.Container ref={imgContainer} color={Bg}>
             <M.PhotoContainer>
               <M.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file1 ? file1 : Blank.src}
-                ></img>
+                <img src={file1 ? file1 : Blank.src}></img>
               </M.PhotoWrapper>
               <M.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file2 ? file2 : Blank.src}
-                ></img>
+                <img src={file2 ? file2 : Blank.src}></img>
               </M.PhotoWrapper>
             </M.PhotoContainer>
             <M.PhotoContainer2>
               <M.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file3 ? file3 : Blank.src}
-                ></img>
+                <img src={file3 ? file3 : Blank.src}></img>
               </M.PhotoWrapper>
               <M.PhotoWrapper>
-                <img
-                  crossOrigin="anonymous"
-                  src={file4 ? file4 : Blank.src}
-                ></img>
+                <img src={file4 ? file4 : Blank.src}></img>
               </M.PhotoWrapper>
             </M.PhotoContainer2>
             {master === session?.user?.email && (
