@@ -69,7 +69,7 @@ function DetailFrame(props) {
             useCORS: false
         }).then((canvas)=>{
             console.log("canvas", canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-            onSaveAs(canvas.toDataURL("image/png"), "4cuts4memories.png");
+            onSaveAs(canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"), "4cuts4memories.png");
         });
         // const onCapture = () => {};
         const onSaveAs = (uri, filename)=>{
@@ -105,25 +105,21 @@ function DetailFrame(props) {
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapper */ .YT, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file1 ? file1 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapper */ .YT, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file2 ? file2 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapper */ .YT, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file3 ? file3 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapper */ .YT, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file4 ? file4 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 })
@@ -133,25 +129,21 @@ function DetailFrame(props) {
                             children: [
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapperGrey */ .kg, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file1 ? file1 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapperGrey */ .kg, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file2 ? file2 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapperGrey */ .kg, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file3 ? file3 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(styles_components_frame1_style__WEBPACK_IMPORTED_MODULE_2__/* .PhotoWrapperGrey */ .kg, {
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                        crossOrigin: "anonymous",
                                         src: file4 ? file4 : public_img_blank_png__WEBPACK_IMPORTED_MODULE_6__/* ["default"].src */ .Z.src
                                     })
                                 })
