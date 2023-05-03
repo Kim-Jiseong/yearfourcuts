@@ -9,11 +9,6 @@ export default NextAuth({
       // checks: ["pkce", "state"], // both
       checks: "both", // both
     }),
-    KakaoProviders({
-      clientId: process.env.KAKAO_CLIENT_ID,
-      clientSecret: process.env.KAKAO_CLIENT_SECRET,
-      checks: "both", // both
-    }),
   ],
   callbacks: {
     async jwt({ token, account }) {

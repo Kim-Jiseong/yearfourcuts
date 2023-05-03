@@ -65,7 +65,7 @@ export default function Intro() {
           )}
           {status !== "authenticated" && (
             <div style={{ width: "100%" }}>
-              <S.Btn onClick={onClickGoogle}>구글로 시작하기</S.Btn>
+              <S.Btn onClick={onClickGoogle}>구글로 시작하기---</S.Btn>
               <S.Btn onClick={onClickKakao}>카카오로 시작하기</S.Btn>
             </div>
           )}
